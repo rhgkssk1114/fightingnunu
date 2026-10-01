@@ -1,51 +1,57 @@
 <title>공고 레이더</title>
-<meta name="description" content="전기전자·생산관리 경력 맞춤 채용공고를 매일 모아 보여주는 대시보드">
+<meta name="description" content="건우님을 위한 전기전자·생산관리 맞춤 채용공고 대시보드 — 매일 자동 업데이트">
 <style>
   :root {
-    --bg: #eef1f0;
+    --bg: #f0f2ef;
     --surface: #ffffff;
-    --surface-sunken: #e4e8e7;
-    --text: #1b2430;
-    --text-muted: #5b6676;
-    --text-faint: #8893a1;
-    --border: #dde2e2;
+    --surface-sunken: #e7eae6;
+    --text: #1a2420;
+    --text-muted: #58645c;
+    --text-faint: #8a9289;
+    --border: #dde1dc;
     --accent: #c9742b;
     --accent-strong: #a85f1f;
     --accent-wash: #f7e9da;
     --new: #2f7d5a;
     --new-wash: #e1f0e7;
+    --urgent: #c4432e;
+    --urgent-wash: #fbe7e2;
     --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
     --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #14181d;
-      --surface: #1c2229;
-      --surface-sunken: #242b33;
-      --text: #e9edf1;
-      --text-muted: #9aa5b3;
-      --text-faint: #6c7686;
-      --border: #2c333c;
+      --bg: #12170f;
+      --surface: #1a2117;
+      --surface-sunken: #222b1e;
+      --text: #e9ede6;
+      --text-muted: #9aa696;
+      --text-faint: #69756a;
+      --border: #2b3426;
       --accent: #e08a3e;
       --accent-strong: #f0a35e;
-      --accent-wash: #332419;
+      --accent-wash: #332616;
       --new: #5fcb94;
       --new-wash: #152922;
+      --urgent: #ef7a62;
+      --urgent-wash: #35201b;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #14181d;
-    --surface: #1c2229;
-    --surface-sunken: #242b33;
-    --text: #e9edf1;
-    --text-muted: #9aa5b3;
-    --text-faint: #6c7686;
-    --border: #2c333c;
+    --bg: #12170f;
+    --surface: #1a2117;
+    --surface-sunken: #222b1e;
+    --text: #e9ede6;
+    --text-muted: #9aa696;
+    --text-faint: #69756a;
+    --border: #2b3426;
     --accent: #e08a3e;
     --accent-strong: #f0a35e;
-    --accent-wash: #332419;
+    --accent-wash: #332616;
     --new: #5fcb94;
     --new-wash: #152922;
+    --urgent: #ef7a62;
+    --urgent-wash: #35201b;
   }
 
   * { box-sizing: border-box; }
@@ -55,72 +61,88 @@
     font-family: var(--sans);
     margin: 0;
     padding-inline: 16px;
-    padding-block: 0 32px;
+    padding-block: 0 40px;
     -webkit-font-smoothing: antialiased;
   }
   a { color: inherit; }
 
   .wrap { max-width: 640px; margin: 0 auto; }
 
-  header.top {
+  /* ---- hero ---- */
+  .hero {
+    padding-block: 22px 16px;
+  }
+  .hero .greeting {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--accent-strong);
+    margin: 0 0 6px;
+  }
+  .hero h1 {
+    font-size: 25px;
+    line-height: 1.3;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .hero h1 .name { color: var(--accent-strong); }
+  .hero .pep {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ---- sticky controls ---- */
+  header.controls-bar {
     position: sticky;
     top: env(safe-area-inset-top, 0px);
     background: var(--bg);
-    padding-block: 14px 10px;
+    padding-block: 12px 10px;
     z-index: 5;
     border-bottom: 1px solid var(--border);
     margin-bottom: 14px;
   }
-  .eyebrow {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent-strong);
-    margin: 0 0 4px;
-  }
-  h1 {
-    font-size: 22px;
-    margin: 0 0 2px;
-    letter-spacing: -0.01em;
-    text-wrap: balance;
-  }
   .updated {
     font-family: var(--mono);
-    font-size: 12px;
+    font-size: 11.5px;
     color: var(--text-faint);
+    margin: 0 0 10px;
   }
 
   .stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-top: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
   }
   .stat {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 10px 12px;
+    padding: 9px 8px;
   }
   .stat .num {
     font-family: var(--mono);
-    font-size: 20px;
+    font-size: 18px;
     font-variant-numeric: tabular-nums;
     font-weight: 600;
+    line-height: 1.1;
   }
   .stat .label {
-    font-size: 11px;
+    font-size: 10.5px;
     color: var(--text-muted);
-    margin-top: 2px;
+    margin-top: 3px;
+    line-height: 1.3;
   }
   .stat.new .num { color: var(--new); }
+  .stat.urgent .num { color: var(--urgent); }
 
   .controls {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: 14px;
+    margin-top: 12px;
   }
   .chip {
     font-family: var(--mono);
@@ -133,16 +155,22 @@
     cursor: pointer;
     user-select: none;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .chip .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor; opacity: 0.5;
   }
   .chip[aria-pressed="true"] {
     background: var(--accent-wash);
     border-color: var(--accent);
     color: var(--accent-strong);
   }
+  .chip[aria-pressed="true"] .dot { opacity: 1; }
 
-  .search {
-    margin-top: 10px;
-  }
+  .search { margin-top: 10px; }
   .search input {
     width: 100%;
     font-family: var(--sans);
@@ -153,17 +181,14 @@
     background: var(--surface);
     color: var(--text);
   }
-  .search input:focus {
-    outline: 2px solid var(--accent);
-    outline-offset: -1px;
-  }
+  .search input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
   .search input::placeholder { color: var(--text-faint); }
 
   .count-line {
     font-family: var(--mono);
     font-size: 12px;
     color: var(--text-faint);
-    margin: 16px 2px 8px;
+    margin: 4px 2px 8px;
   }
 
   .list { display: flex; flex-direction: column; gap: 8px; }
@@ -177,6 +202,7 @@
     flex-direction: column;
     gap: 6px;
   }
+  .card.is-urgent { border-color: color-mix(in srgb, var(--urgent) 40%, var(--border)); }
   .card-top {
     display: flex;
     align-items: center;
@@ -192,16 +218,17 @@
     color: var(--text-muted);
     letter-spacing: 0.02em;
   }
-  .new-badge {
+  .badge {
     font-family: var(--mono);
     font-size: 10.5px;
     padding: 2px 7px;
     border-radius: 5px;
-    background: var(--new-wash);
-    color: var(--new);
     font-weight: 600;
     letter-spacing: 0.02em;
   }
+  .badge.new { background: var(--new-wash); color: var(--new); }
+  .badge.urgent { background: var(--urgent-wash); color: var(--urgent); }
+
   .card h3 {
     font-size: 15px;
     margin: 0;
@@ -209,10 +236,7 @@
     font-weight: 600;
     text-wrap: balance;
   }
-  .card .company {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
+  .card .company { font-size: 13px; color: var(--text-muted); }
   .card .condition {
     font-family: var(--mono);
     font-size: 11.5px;
@@ -249,15 +273,94 @@
   }
   footer .profile { color: var(--text-muted); }
   footer a { color: var(--accent-strong); text-decoration: none; border-bottom: 1px solid var(--border); }
+
+  /* ---- chat launcher + panel ---- */
+  #chatFab {
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right, 0px));
+    bottom: max(16px, env(safe-area-inset-bottom, 0px));
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--accent-strong);
+    color: #fff;
+    border: none;
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--accent-strong) 45%, transparent);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 20;
+  }
+  #chatFab svg { width: 22px; height: 22px; }
+
+  #chatPanel {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  #chatPanel .chat-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  #chatPanel .chat-head h2 { font-size: 15px; margin: 0; }
+  #chatPanel .chat-head .sub { font-family: var(--mono); font-size: 11px; color: var(--text-faint); }
+  #chatClose {
+    border: none; background: var(--surface-sunken); color: var(--text-muted);
+    width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 16px;
+  }
+  #chatMessages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .msg { max-width: 86%; padding: 9px 12px; border-radius: 12px; font-size: 13.5px; line-height: 1.55; }
+  .msg.bot { background: var(--surface); border: 1px solid var(--border); align-self: flex-start; border-bottom-left-radius: 3px; }
+  .msg.me { background: var(--accent-wash); color: var(--accent-strong); align-self: flex-end; border-bottom-right-radius: 3px; }
+  .msg.bot ul { margin: 6px 0 0; padding-left: 18px; }
+  .msg.bot li { margin-bottom: 3px; }
+  .chat-suggests { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 10px; }
+  .suggest-chip {
+    font-size: 12px; font-family: var(--mono);
+    border: 1px solid var(--border); background: var(--surface);
+    border-radius: 999px; padding: 6px 10px; cursor: pointer; color: var(--text-muted);
+  }
+  #chatForm {
+    display: flex; gap: 8px;
+    padding: 10px 16px;
+    border-top: 1px solid var(--border);
+  }
+  #chatInput {
+    flex: 1; font-family: var(--sans); font-size: 14px;
+    padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text);
+  }
+  #chatSend {
+    font-family: var(--mono); font-size: 13px;
+    background: var(--accent-strong); color: #fff; border: none;
+    border-radius: 10px; padding: 0 16px; cursor: pointer;
+  }
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 
 <div class="wrap">
-  <header class="top">
-    <p class="eyebrow">Job Radar · 서울·경기</p>
-    <h1>전기전자 · 생산관리 공고 레이더</h1>
+  <div class="hero">
+    <p class="greeting">JOB RADAR · 건우 전용</p>
+    <h1><span class="name">건우</span>, 오늘도 좋은 자리 하나 찾아보자.</h1>
+    <p class="pep" id="pepLine">전기전자 제어 · 회로설계 2~3년 · 생산관리 1년 3개월 — 서울·경기, 정규직만 매일 걸러서 모아둘게.</p>
+  </div>
+
+  <header class="controls-bar">
     <p class="updated" id="updated">불러오는 중…</p>
 
     <div class="stats">
@@ -267,17 +370,22 @@
       </div>
       <div class="stat new">
         <div class="num" id="statNew">–</div>
-        <div class="label">신규 (전일 대비)</div>
+        <div class="label">신규</div>
+      </div>
+      <div class="stat urgent">
+        <div class="num" id="statUrgent">–</div>
+        <div class="label">마감임박</div>
       </div>
       <div class="stat">
-        <div class="num" id="statSites">5</div>
+        <div class="num" id="statSites">4</div>
         <div class="label">수집 사이트</div>
       </div>
     </div>
 
     <div class="controls" id="siteFilters"></div>
     <div class="controls">
-      <button class="chip" id="newOnly" aria-pressed="false">🆕 신규만 보기</button>
+      <button class="chip" id="newOnly" aria-pressed="false"><span class="dot"></span>신규만</button>
+      <button class="chip" id="urgentOnly" aria-pressed="false"><span class="dot"></span>마감임박만</button>
     </div>
     <div class="search">
       <input id="searchBox" type="text" placeholder="직무, 회사명으로 검색 (예: 회로설계, 품질관리)">
@@ -291,88 +399,139 @@
   <footer>
     <p class="profile">
       <strong>맞춤 기준</strong> — 전기전자 제어 · 회로설계 2~3년 · 생산관리 1년 3개월 경력 ·
-      희망지역 서울/경기 · 정규직만 (계약직·인턴·파견 제외)
+      희망지역 서울/경기 · 정규직만 (계약직·인턴·파견 제외) · 마감된 공고는 자동으로 숨겨요
     </p>
     <p>
-      사람인·잡코리아·원티드·캐치는 매일 자동 수집돼요. 자소설닷컴은 대기업 공채 일정 위주라
-      <a href="https://jasoseol.com/recruit" target="_blank" rel="noopener">사이트에서 직접 확인</a>하는 걸 권장하고,
-      인크루트는 자동 수집이 불안정해 <a href="https://search.incruit.com/list/search.asp?col=job" target="_blank" rel="noopener">검색 페이지로 바로가기</a>를 둘게요.
+      사람인·잡코리아·원티드·캐치는 매일 자동 수집돼요. 자소설닷컴은 로그인 세션이 있어야 데이터를 주는 사이트라
+      자동 수집이 안 돼서 <a href="https://jasoseol.com/recruit" target="_blank" rel="noopener">사이트에서 직접 확인</a>하는 걸 권장하고,
+      인크루트는 <a href="https://search.incruit.com/list/search.asp?col=job" target="_blank" rel="noopener">검색 페이지로 바로가기</a>를 둘게요.
+      잡코리아는 목록에 마감일이 안 나와서 마감임박 표시는 지원하지 않아요.
     </p>
   </footer>
 </div>
 
+<button id="chatFab" aria-label="공고 도우미 열기" title="공고 도우미">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+
+<div id="chatPanel" hidden>
+  <div class="chat-head">
+    <div>
+      <h2>공고 도우미</h2>
+      <div class="sub">지금 리스트 안에서 바로 찾아줘요</div>
+    </div>
+    <button id="chatClose" aria-label="닫기">✕</button>
+  </div>
+  <div id="chatMessages"></div>
+  <div class="chat-suggests" id="chatSuggests"></div>
+  <form id="chatForm">
+    <input id="chatInput" type="text" placeholder="예: 경기 지역 마감임박 공고 보여줘" autocomplete="off">
+    <button id="chatSend" type="submit">보내기</button>
+  </form>
+</div>
+
 <script>
 (function () {
-  var state = { jobs: [], site: "전체", newOnly: false, q: "" };
+  var state = { jobs: [], site: "전체", newOnly: false, urgentOnly: false, q: "" };
+
+  var PEP_LINES = [
+    "오늘 지원 하나 넣으면, 내일은 한 걸음 더 가까워져 있을 거야.",
+    "급할수록 천천히 — 조건 맞는 곳부터 하나씩 체크해보자.",
+    "마감임박 공고부터 먼저 훑어보는 게 오늘의 할 일.",
+    "경력 2~3년이면 생각보다 문 두드릴 곳 많아. 하나씩 가보자.",
+    "오늘 못 찾아도 괜찮아, 매일 아침 새로 채워질 거야."
+  ];
 
   function fmtUpdated(iso, display) {
     return "마지막 업데이트 · " + (display || iso || "알 수 없음");
+  }
+
+  function dayIndex() {
+    var d = new Date();
+    var start = new Date(d.getFullYear(), 0, 0);
+    var diff = d - start;
+    return Math.floor(diff / 86400000);
+  }
+
+  function jobMatchesFilters(j, overrides) {
+    overrides = overrides || {};
+    var site = overrides.site !== undefined ? overrides.site : state.site;
+    var newOnly = overrides.newOnly !== undefined ? overrides.newOnly : state.newOnly;
+    var urgentOnly = overrides.urgentOnly !== undefined ? overrides.urgentOnly : state.urgentOnly;
+    var q = (overrides.q !== undefined ? overrides.q : state.q).trim().toLowerCase();
+
+    if (site !== "전체" && j.site !== site) return false;
+    if (newOnly && !j.is_new) return false;
+    if (urgentOnly && !j.urgent) return false;
+    if (q) {
+      var hay = (j.title + " " + j.company + " " + (j.location || "")).toLowerCase();
+      if (hay.indexOf(q) === -1) return false;
+    }
+    return true;
+  }
+
+  function cardEl(j) {
+    var card = document.createElement("div");
+    card.className = "card" + (j.urgent ? " is-urgent" : "");
+
+    var top = document.createElement("div");
+    top.className = "card-top";
+    var tag = document.createElement("span");
+    tag.className = "site-tag";
+    tag.textContent = j.site;
+    top.appendChild(tag);
+    if (j.is_new) {
+      var nb = document.createElement("span");
+      nb.className = "badge new";
+      nb.textContent = "NEW";
+      top.appendChild(nb);
+    }
+    if (j.urgent) {
+      var ub = document.createElement("span");
+      ub.className = "badge urgent";
+      ub.textContent = j.dday === 0 ? "오늘마감" : ("마감 D-" + j.dday);
+      top.appendChild(ub);
+    }
+    card.appendChild(top);
+
+    var h3 = document.createElement("h3");
+    h3.textContent = j.title;
+    card.appendChild(h3);
+
+    var company = document.createElement("div");
+    company.className = "company";
+    company.textContent = j.company;
+    card.appendChild(company);
+
+    if (j.condition) {
+      var cond = document.createElement("div");
+      cond.className = "condition";
+      cond.textContent = j.condition;
+      card.appendChild(cond);
+    }
+
+    var link = document.createElement("a");
+    link.className = "apply";
+    link.href = j.link;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "공고 보기 →";
+    card.appendChild(link);
+
+    return card;
   }
 
   function render() {
     var list = document.getElementById("list");
     var empty = document.getElementById("emptyMsg");
     var countLine = document.getElementById("countLine");
-    var q = state.q.trim().toLowerCase();
 
-    var filtered = state.jobs.filter(function (j) {
-      if (state.site !== "전체" && j.site !== state.site) return false;
-      if (state.newOnly && !j.is_new) return false;
-      if (q) {
-        var hay = (j.title + " " + j.company).toLowerCase();
-        if (hay.indexOf(q) === -1) return false;
-      }
-      return true;
-    });
+    var filtered = state.jobs.filter(function (j) { return jobMatchesFilters(j); });
 
     countLine.textContent = filtered.length + "건 표시 중";
     list.innerHTML = "";
     empty.hidden = filtered.length !== 0;
-
-    filtered.forEach(function (j) {
-      var card = document.createElement("div");
-      card.className = "card";
-
-      var top = document.createElement("div");
-      top.className = "card-top";
-      var tag = document.createElement("span");
-      tag.className = "site-tag";
-      tag.textContent = j.site;
-      top.appendChild(tag);
-      if (j.is_new) {
-        var nb = document.createElement("span");
-        nb.className = "new-badge";
-        nb.textContent = "NEW";
-        top.appendChild(nb);
-      }
-      card.appendChild(top);
-
-      var h3 = document.createElement("h3");
-      h3.textContent = j.title;
-      card.appendChild(h3);
-
-      var company = document.createElement("div");
-      company.className = "company";
-      company.textContent = j.company;
-      card.appendChild(company);
-
-      if (j.condition) {
-        var cond = document.createElement("div");
-        cond.className = "condition";
-        cond.textContent = j.condition;
-        card.appendChild(cond);
-      }
-
-      var link = document.createElement("a");
-      link.className = "apply";
-      link.href = j.link;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.textContent = "공고 보기 →";
-      card.appendChild(link);
-
-      list.appendChild(card);
-    });
+    filtered.forEach(function (j) { list.appendChild(cardEl(j)); });
   }
 
   function buildSiteFilters(sites) {
@@ -382,7 +541,7 @@
     all.forEach(function (s) {
       var btn = document.createElement("button");
       btn.className = "chip";
-      btn.textContent = s;
+      btn.innerHTML = '<span class="dot"></span>' + s;
       btn.setAttribute("aria-pressed", s === state.site ? "true" : "false");
       btn.addEventListener("click", function () {
         state.site = s;
@@ -400,14 +559,21 @@
     document.getElementById("updated").textContent = fmtUpdated(data.updated_at, data.updated_at_display);
     document.getElementById("statTotal").textContent = data.total != null ? data.total : state.jobs.length;
     document.getElementById("statNew").textContent = data.new_count != null ? data.new_count : 0;
+    document.getElementById("statUrgent").textContent = data.urgent_count != null ? data.urgent_count : 0;
+    document.getElementById("pepLine").textContent += "  " + PEP_LINES[dayIndex() % PEP_LINES.length];
 
     var sites = Array.from(new Set(state.jobs.map(function (j) { return j.site; })));
-    document.getElementById("statSites").textContent = sites.length || 5;
+    document.getElementById("statSites").textContent = sites.length || 4;
     buildSiteFilters(sites);
 
     document.getElementById("newOnly").addEventListener("click", function () {
       state.newOnly = !state.newOnly;
       this.setAttribute("aria-pressed", state.newOnly ? "true" : "false");
+      render();
+    });
+    document.getElementById("urgentOnly").addEventListener("click", function () {
+      state.urgentOnly = !state.urgentOnly;
+      this.setAttribute("aria-pressed", state.urgentOnly ? "true" : "false");
       render();
     });
     document.getElementById("searchBox").addEventListener("input", function (e) {
@@ -416,6 +582,7 @@
     });
 
     render();
+    initChat();
   }
 
   fetch("jobs.json")
@@ -426,5 +593,127 @@
       document.getElementById("countLine").textContent = "";
       console.error(err);
     });
+
+  // ---------------- 공고 도우미 (규칙 기반, 서버/API키 없이 동작) ----------------
+  function initChat() {
+    var fab = document.getElementById("chatFab");
+    var panel = document.getElementById("chatPanel");
+    var closeBtn = document.getElementById("chatClose");
+    var messages = document.getElementById("chatMessages");
+    var form = document.getElementById("chatForm");
+    var input = document.getElementById("chatInput");
+    var suggestsBox = document.getElementById("chatSuggests");
+
+    var SITE_WORDS = ["사람인", "잡코리아", "원티드", "캐치"];
+    var REGION_WORDS = { "서울": "서울", "경기": "경기" };
+
+    function addMsg(role, html) {
+      var m = document.createElement("div");
+      m.className = "msg " + (role === "me" ? "me" : "bot");
+      m.innerHTML = html;
+      messages.appendChild(m);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function jobListHtml(jobs, limit) {
+      var shown = jobs.slice(0, limit || 5);
+      if (shown.length === 0) return "<div>조건에 맞는 공고를 못 찾았어요.</div>";
+      var html = "<ul>" + shown.map(function (j) {
+        var badge = j.urgent ? ' <strong style="color:var(--urgent)">[D-' + j.dday + ']</strong>' : (j.is_new ? ' <strong style="color:var(--new)">[NEW]</strong>' : '');
+        return '<li><a href="' + j.link + '" target="_blank" rel="noopener">' + j.title + '</a> · ' + j.company + badge + '</li>';
+      }).join("") + "</ul>";
+      if (jobs.length > shown.length) {
+        html += "<div>외 " + (jobs.length - shown.length) + "건 더 있어요. 위 필터 칩으로 좁혀볼 수 있어요.</div>";
+      }
+      return html;
+    }
+
+    function handleQuery(text) {
+      var q = text.trim();
+      var lower = q.toLowerCase();
+      addMsg("me", q.replace(/</g, "&lt;"));
+
+      // 사이트 리셋/전체 보기
+      if (/전체|초기화|리셋/.test(q)) {
+        state.site = "전체"; state.newOnly = false; state.urgentOnly = false; state.q = "";
+        render();
+        addMsg("bot", "필터 다 풀었어요. 전체 " + state.jobs.length + "건 보여드릴게요.");
+        return;
+      }
+
+      // 마감임박
+      if (/마감임박|마감 임박|곧 마감|디데이|d-day|dday/.test(lower)) {
+        var urgent = state.jobs.filter(function (j) { return jobMatchesFilters(j, { urgentOnly: true }); });
+        addMsg("bot", "마감이 가까운 공고예요 (D-3 이내):" + jobListHtml(urgent, 6));
+        return;
+      }
+
+      // 신규
+      if (/신규|새로운|새 공고|오늘 올라온/.test(q)) {
+        var news = state.jobs.filter(function (j) { return jobMatchesFilters(j, { newOnly: true }); });
+        addMsg("bot", "오늘 새로 들어온 공고예요:" + jobListHtml(news, 6));
+        return;
+      }
+
+      // 지역
+      var regionHit = null;
+      Object.keys(REGION_WORDS).forEach(function (k) { if (q.indexOf(k) !== -1) regionHit = k; });
+
+      // 사이트
+      var siteHit = null;
+      SITE_WORDS.forEach(function (s) { if (q.indexOf(s) !== -1) siteHit = s; });
+
+      if (regionHit || siteHit) {
+        var filtered = state.jobs.filter(function (j) {
+          var ok = jobMatchesFilters(j, { site: siteHit || "전체" });
+          if (ok && regionHit) ok = (j.location || "").indexOf(regionHit) !== -1 || j.condition.indexOf(regionHit) !== -1;
+          return ok;
+        });
+        if (siteHit) { state.site = siteHit; buildSiteFilters(Array.from(new Set(state.jobs.map(function(j){return j.site;})))); }
+        render();
+        var label = [siteHit, regionHit].filter(Boolean).join(" · ");
+        addMsg("bot", (label || "조건") + " 공고예요:" + jobListHtml(filtered, 6));
+        return;
+      }
+
+      // 키워드 검색 (회로설계, 품질관리 등 직무 키워드 그대로 검색창에 반영)
+      var keyword = q.replace(/(공고|보여줘|찾아줘|알려줘|좀|해줘|줄래|있어)/g, "").trim();
+      if (keyword) {
+        state.q = keyword;
+        document.getElementById("searchBox").value = keyword;
+        render();
+        var matched = state.jobs.filter(function (j) { return jobMatchesFilters(j); });
+        addMsg("bot", '"' + keyword + '" 로 찾아봤어요:' + jobListHtml(matched, 6));
+        return;
+      }
+
+      addMsg("bot", "이렇게 물어보면 찾아드려요 — \"마감임박 공고\", \"경기 지역 신규\", \"원티드 회로설계\" 처럼요.");
+    }
+
+    var SUGGESTS = ["마감임박 공고 보여줘", "경기 지역만", "신규 공고", "원티드 회로설계", "전체 보기"];
+    SUGGESTS.forEach(function (s) {
+      var b = document.createElement("button");
+      b.className = "suggest-chip";
+      b.textContent = s;
+      b.addEventListener("click", function () { handleQuery(s); });
+      suggestsBox.appendChild(b);
+    });
+
+    fab.addEventListener("click", function () {
+      panel.hidden = false;
+      if (messages.children.length === 0) {
+        addMsg("bot", "안녕, 건우! 리스트 안에서 바로 찾아줄게. 아래 버튼 눌러보거나 직접 물어봐.");
+      }
+      input.focus();
+    });
+    closeBtn.addEventListener("click", function () { panel.hidden = true; });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = input.value;
+      if (!v.trim()) return;
+      input.value = "";
+      handleQuery(v);
+    });
+  }
 })();
 </script>

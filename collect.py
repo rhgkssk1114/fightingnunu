@@ -1,28 +1,36 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+매일 실행되는 취업공고 수집 스크립트.
+사람인 / 잡코리아 / 원티드 / 캐치에서 프로필에 맞는 공고를 모아
+jobs.json 으로 저장한다 (웹페이지가 이 파일을 읽어서 보여줌).
+마감된 공고는 제외하고, 마감일이 가까운 공고는 dday를 같이 기록한다.
+"""
 import json
+import re
 import time
 import hashlib
 import urllib.parse
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, date, timezone, timedelta
 from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
 
 BASE_DIR = Path(__file__).parent
-DATA_DIR = BASE_DIR / "data"
 JOBS_FILE = BASE_DIR / "jobs.json"
-PREV_IDS_FILE = DATA_DIR / "seen_ids.json"
+PREV_IDS_FILE = BASE_DIR / "data" / "seen_ids.json"
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
 HEADERS = {"User-Agent": UA}
 
+# ---- 사용자 프로필 ----
 QUERIES = ["전기전자", "회로설계", "생산관리", "품질관리", "생산기술", "설비관리"]
 REGION_KEYWORDS = ["서울", "경기"]
 EXCLUDE_EMPLOYMENT = ["계약직", "인턴", "파견", "도급", "아웃소싱", "프리랜서", "일용직", "아르바이트", "단기"]
 KST = timezone(timedelta(hours=9))
+TODAY = datetime.now(KST).date()
 
 
 def job_id(*parts):
@@ -37,6 +45,38 @@ def is_excluded_employment(text):
     return any(e in text for e in EXCLUDE_EMPLOYMENT)
 
 
+def dday_of(deadline_str):
+    """deadline_str: 'YYYY-MM-DD' or None -> dday (int) or None"""
+    if not deadline_str:
+        return None
+    try:
+        d = datetime.strptime(deadline_str, "%Y-%m-%d").date()
+    except ValueError:
+        return None
+    return (d - TODAY).days
+
+
+def parse_saramin_date(text):
+    """'~ 10/17(토)' -> 'YYYY-MM-DD', '채용시' -> None"""
+    m = re.search(r"(\d{1,2})/(\d{1,2})", text or "")
+    if not m:
+        return None
+    mm, dd = int(m.group(1)), int(m.group(2))
+    try:
+        d = date(TODAY.year, mm, dd)
+    except ValueError:
+        return None
+    if d < TODAY - timedelta(days=1):
+        d = date(TODAY.year + 1, mm, dd)
+    return d.isoformat()
+
+
+def is_expired(deadline_str):
+    dd = dday_of(deadline_str)
+    return dd is not None and dd < 0
+
+
+# ---------------- 사람인 ----------------
 def fetch_saramin(query):
     results = []
     url = "https://www.saramin.co.kr/zf_user/search/recruit"
@@ -66,6 +106,11 @@ def fetch_saramin(query):
         if is_excluded_employment(cond_text):
             continue
 
+        date_el = item.select_one(".job_date .date")
+        deadline = parse_saramin_date(date_el.get_text(strip=True)) if date_el else None
+        if is_expired(deadline):
+            continue
+
         results.append({
             "id": job_id("saramin", link),
             "site": "사람인",
@@ -75,10 +120,13 @@ def fetch_saramin(query):
             "condition": cond_text,
             "link": link,
             "query": query,
+            "deadline": deadline,
+            "dday": dday_of(deadline),
         })
     return results
 
 
+# ---------------- 잡코리아 ----------------
 def fetch_jobkorea(query):
     results = []
     url = "https://www.jobkorea.co.kr/Search/"
@@ -111,6 +159,7 @@ def fetch_jobkorea(query):
         company_el = card.select_one("a[href*='/Company/']")
         company = company_el.get_text(strip=True) if company_el else ""
 
+        # 잡코리아 검색 결과 카드에는 마감일이 표시되지 않아 deadline은 항상 미확인(None)
         results.append({
             "id": job_id("jobkorea", link),
             "site": "잡코리아",
@@ -120,10 +169,13 @@ def fetch_jobkorea(query):
             "condition": full_text[:120],
             "link": link,
             "query": query,
+            "deadline": None,
+            "dday": None,
         })
     return results
 
 
+# ---------------- 원티드 ----------------
 def fetch_wanted(query):
     results = []
     url = "https://www.wanted.co.kr/api/chaos/search/v1/position"
@@ -148,17 +200,24 @@ def fetch_wanted(query):
         link = f"https://www.wanted.co.kr/wd/{wid}"
 
         location_text = ""
+        deadline = None
         try:
             d = requests.get(f"https://www.wanted.co.kr/api/chaos/jobs/v4/{wid}/details",
                               headers=HEADERS, timeout=10).json()
-            addr = d.get("data", {}).get("job", {}).get("address", {})
+            job = d.get("data", {}).get("job", {})
+            addr = job.get("address", {})
             location_text = " ".join(filter(None, [addr.get("location"), addr.get("district")]))
             if not location_text:
                 location_text = json.dumps(addr, ensure_ascii=False)
+            due_time = job.get("due_time")
+            if due_time:
+                deadline = due_time[:10]
         except Exception:
             pass
 
         if not contains_region(location_text):
+            continue
+        if is_expired(deadline):
             continue
 
         results.append({
@@ -170,11 +229,14 @@ def fetch_wanted(query):
             "condition": "정규직",
             "link": link,
             "query": query,
+            "deadline": deadline,
+            "dday": dday_of(deadline),
         })
         time.sleep(0.15)
     return results
 
 
+# ---------------- 캐치 ----------------
 def fetch_catch(query):
     results = []
     url = "https://www.catch.co.kr/api/v1.0/recruit/information/getRecruitList"
@@ -199,6 +261,16 @@ def fetch_catch(query):
         if not contains_region(work_area):
             continue
 
+        deadline = None
+        end_dt = item.get("ApplyEndDatetime")
+        if end_dt:
+            try:
+                deadline = datetime.fromisoformat(end_dt.replace("Z", "+00:00")).astimezone(KST).date().isoformat()
+            except Exception:
+                deadline = None
+        if is_expired(deadline):
+            continue
+
         rid = item.get("RecruitID")
         link = f"https://www.catch.co.kr/NCS/RecruitDetail?RecruitID={rid}"
         results.append({
@@ -210,37 +282,8 @@ def fetch_catch(query):
             "condition": f"{gubun} · {item.get('ExperienceText', '')}",
             "link": link,
             "query": query,
-        })
-    return results
-
-
-def fetch_jasoseol():
-    results = []
-    url = "https://jasoseol.com/employment/calendar_list.json"
-    keywords = ["전기", "전자", "제어", "생산", "품질", "설비", "공정", "기계", "안전", "환경"]
-    try:
-        r = requests.post(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        data = r.json()
-    except Exception as e:
-        print(f"  [자소설닷컴] 실패: {e}")
-        return results
-
-    for emp in data.get("employment", []):
-        title = emp.get("title", "")
-        if not any(k in title for k in keywords):
-            continue
-        company = emp.get("name", "")
-        link = f"https://jasoseol.com/employment/{emp.get('id')}"
-        results.append({
-            "id": job_id("jasoseol", str(emp.get("id"))),
-            "site": "자소설닷컴",
-            "title": title,
-            "company": company,
-            "location": "미확인 (직접 확인 필요)",
-            "condition": "대기업 공채 일정 - 지역/고용형태 직접 확인 필요",
-            "link": link,
-            "query": "jasoseol",
+            "deadline": deadline,
+            "dday": dday_of(deadline),
         })
     return results
 
@@ -272,10 +315,6 @@ def main():
             all_jobs[j["id"]] = j
         time.sleep(0.3)
 
-    print("자소설닷컴 수집 중...")
-    for j in fetch_jasoseol():
-        all_jobs[j["id"]] = j
-
     seen_ids = set()
     if PREV_IDS_FILE.exists():
         seen_ids = set(json.loads(PREV_IDS_FILE.read_text(encoding="utf-8")))
@@ -283,11 +322,21 @@ def main():
     jobs_list = list(all_jobs.values())
     for j in jobs_list:
         j["is_new"] = j["id"] not in seen_ids
+        j["urgent"] = j["dday"] is not None and 0 <= j["dday"] <= 3
 
-    DATA_DIR.mkdir(exist_ok=True)
+    PREV_IDS_FILE.parent.mkdir(exist_ok=True)
     PREV_IDS_FILE.write_text(
         json.dumps(list(all_jobs.keys()), ensure_ascii=False), encoding="utf-8"
     )
+
+    # 신규 -> 마감임박 -> 나머지 순으로 정렬 (같은 그룹 안에서는 마감일이 빠른 순)
+    def sort_key(j):
+        return (
+            not j["is_new"],
+            not j["urgent"],
+            j["dday"] if j["dday"] is not None else 9999,
+            j["site"],
+        )
 
     now = datetime.now(KST)
     output = {
@@ -295,10 +344,11 @@ def main():
         "updated_at_display": now.strftime("%Y-%m-%d %H:%M"),
         "total": len(jobs_list),
         "new_count": sum(1 for j in jobs_list if j["is_new"]),
-        "jobs": sorted(jobs_list, key=lambda j: (not j["is_new"], j["site"])),
+        "urgent_count": sum(1 for j in jobs_list if j["urgent"]),
+        "jobs": sorted(jobs_list, key=sort_key),
     }
     JOBS_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"완료: 총 {len(jobs_list)}건 (신규 {output['new_count']}건)")
+    print(f"완료: 총 {len(jobs_list)}건 (신규 {output['new_count']}건, 마감임박 {output['urgent_count']}건)")
 
 
 if __name__ == "__main__":
