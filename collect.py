@@ -101,8 +101,75 @@ def guess_company_size(business_size, popular_category):
     return None
 
 
+def clean_company_name(company):
+    name = re.sub(r"^\(주\)|\(주\)$|^㈜|㈜$|주식회사\s*", "", company or "").strip()
+    return name or company
+
+
 def blind_search_url(company):
-    return "https://www.teamblind.com/kr/search/" + urllib.parse.quote(company)
+    return "https://www.teamblind.com/kr/search/" + urllib.parse.quote(clean_company_name(company))
+
+
+def classify_employee_count(text):
+    """'51~300명' 같은 문구에서 숫자를 뽑아 대략적인 규모로 분류한다."""
+    nums = re.findall(r"\d+", text or "")
+    if not nums:
+        return None
+    n = int(nums[-1])
+    if n >= 1000:
+        return "대기업"
+    if n >= 300:
+        return "중견기업"
+    if n >= 50:
+        return "중소기업"
+    return "소기업"
+
+
+SARAMIN_SIZE_CACHE = {}
+WANTED_SIZE_CACHE = {}
+
+
+def fetch_saramin_company_size(csn):
+    if not csn:
+        return None
+    if csn in SARAMIN_SIZE_CACHE:
+        return SARAMIN_SIZE_CACHE[csn]
+    size = None
+    try:
+        r = requests.get(
+            "https://www.saramin.co.kr/zf_user/company-info/view",
+            params={"csn": csn}, headers=HEADERS, timeout=10,
+        )
+        m = re.search(r"기업형태\s*[:：]\s*([가-힣]+)", r.text)
+        if m:
+            size = m.group(1)
+    except Exception:
+        size = None
+    SARAMIN_SIZE_CACHE[csn] = size
+    return size
+
+
+def fetch_wanted_company_size(company_id):
+    if not company_id:
+        return None
+    if company_id in WANTED_SIZE_CACHE:
+        return WANTED_SIZE_CACHE[company_id]
+    size = None
+    try:
+        r = requests.get(
+            f"https://www.wanted.co.kr/api/v4/companies/{company_id}",
+            headers=HEADERS, timeout=10,
+        )
+        tags = r.json().get("company", {}).get("company_tags", [])
+        for t in tags:
+            title = t.get("title", "")
+            if "명" in title:
+                size = classify_employee_count(title)
+                break
+    except Exception:
+        size = None
+    WANTED_SIZE_CACHE[company_id] = size
+    return size
 
 
 # ---------------- 사람인 ----------------
@@ -140,14 +207,23 @@ def fetch_saramin(query):
         if is_expired(deadline):
             continue
 
+        tokens = cond_text.split(" ") if cond_text else []
+        if len(tokens) >= 2 and re.match(r"^[가-힣]+(시|군|구)$", tokens[1]):
+            location = tokens[0] + " " + tokens[1]
+        else:
+            location = tokens[0] if tokens else ""
+
+        csn_match = re.search(r"csn=([^&\"]+)", corp.get("href", ""))
+        company_size = fetch_saramin_company_size(csn_match.group(1)) if csn_match else None
+
         results.append({
             "id": job_id("saramin", link),
             "site": "사람인",
             "title": title,
             "company": company,
-            "location": cond_text.split(" ")[0] if cond_text else "",
+            "location": location,
             "condition": cond_text,
-            "company_size": None,
+            "company_size": company_size,
             "link": link,
             "query": query,
             "deadline": deadline,
@@ -171,7 +247,7 @@ def fetch_jobkorea(query):
     soup = BeautifulSoup(r.text, "lxml")
     cards = soup.select("div.w-full.rounded-2xl.p-0.shadow-list.bg-white")
     for card in cards:
-        a = card.select_one('a[href*="/Recruit/GI_Read/"]')
+        a = card.select_one('a[data-sentry-component="Title"]') or card.select_one('a[href*="/Recruit/GI_Read/"]')
         if not a:
             continue
         title = a.get_text(strip=True)
@@ -240,6 +316,7 @@ def fetch_wanted(query):
 
         location_text = ""
         deadline = None
+        company_size = None
         try:
             d = requests.get(f"https://www.wanted.co.kr/api/chaos/jobs/v4/{wid}/details",
                               headers=HEADERS, timeout=10).json()
@@ -251,6 +328,8 @@ def fetch_wanted(query):
             due_time = job.get("due_time")
             if due_time:
                 deadline = due_time[:10]
+            company_id = job.get("company", {}).get("id")
+            company_size = fetch_wanted_company_size(company_id)
         except Exception:
             pass
 
@@ -266,7 +345,7 @@ def fetch_wanted(query):
             "company": company,
             "location": location_text,
             "condition": "정규직",
-            "company_size": None,
+            "company_size": company_size,
             "link": link,
             "query": query,
             "deadline": deadline,
