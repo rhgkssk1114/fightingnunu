@@ -1,1 +1,3 @@
 data/
+chat-worker/.wrangler/
+chat-worker/node_modules/
