@@ -594,7 +594,9 @@
       console.error(err);
     });
 
-  // ---------------- 공고 도우미 (규칙 기반, 서버/API키 없이 동작) ----------------
+  // ---------------- 공고 도우미 (Claude API 연동, Cloudflare Worker 경유) ----------------
+  var CHAT_API = "https://job-radar-chat.rhgkssk1114.workers.dev/chat";
+
   function initChat() {
     var fab = document.getElementById("chatFab");
     var panel = document.getElementById("chatPanel");
@@ -603,94 +605,63 @@
     var form = document.getElementById("chatForm");
     var input = document.getElementById("chatInput");
     var suggestsBox = document.getElementById("chatSuggests");
+    var sendBtn = document.getElementById("chatSend");
 
-    var SITE_WORDS = ["사람인", "잡코리아", "원티드", "캐치"];
-    var REGION_WORDS = { "서울": "서울", "경기": "경기" };
+    var apiHistory = []; // [{role:'me'|'bot', content}] 최근 대화만 보냄
 
-    function addMsg(role, html) {
+    function addMsg(role, text) {
       var m = document.createElement("div");
       m.className = "msg " + (role === "me" ? "me" : "bot");
-      m.innerHTML = html;
+      // 링크 텍스트(http...)를 클릭 가능한 a 태그로, 나머지는 이스케이프 + 줄바꿈 유지
+      var escaped = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      var withLinks = escaped.replace(/(https?:\/\/[^\s]+)/g, function (url) {
+        return '<a href="' + url + '" target="_blank" rel="noopener">' + url + '</a>';
+      });
+      m.innerHTML = withLinks.replace(/\n/g, "<br>");
       messages.appendChild(m);
       messages.scrollTop = messages.scrollHeight;
+      return m;
     }
 
-    function jobListHtml(jobs, limit) {
-      var shown = jobs.slice(0, limit || 5);
-      if (shown.length === 0) return "<div>조건에 맞는 공고를 못 찾았어요.</div>";
-      var html = "<ul>" + shown.map(function (j) {
-        var badge = j.urgent ? ' <strong style="color:var(--urgent)">[D-' + j.dday + ']</strong>' : (j.is_new ? ' <strong style="color:var(--new)">[NEW]</strong>' : '');
-        return '<li><a href="' + j.link + '" target="_blank" rel="noopener">' + j.title + '</a> · ' + j.company + badge + '</li>';
-      }).join("") + "</ul>";
-      if (jobs.length > shown.length) {
-        html += "<div>외 " + (jobs.length - shown.length) + "건 더 있어요. 위 필터 칩으로 좁혀볼 수 있어요.</div>";
-      }
-      return html;
+    function setBusy(busy) {
+      input.disabled = busy;
+      sendBtn.disabled = busy;
+      sendBtn.textContent = busy ? "…" : "보내기";
     }
 
     function handleQuery(text) {
       var q = text.trim();
-      var lower = q.toLowerCase();
-      addMsg("me", q.replace(/</g, "&lt;"));
+      if (!q) return;
+      addMsg("me", q);
+      apiHistory.push({ role: "me", content: q });
+      setBusy(true);
+      var thinking = addMsg("bot", "생각 중…");
 
-      // 사이트 리셋/전체 보기
-      if (/전체|초기화|리셋/.test(q)) {
-        state.site = "전체"; state.newOnly = false; state.urgentOnly = false; state.q = "";
-        render();
-        addMsg("bot", "필터 다 풀었어요. 전체 " + state.jobs.length + "건 보여드릴게요.");
-        return;
-      }
-
-      // 마감임박
-      if (/마감임박|마감 임박|곧 마감|디데이|d-day|dday/.test(lower)) {
-        var urgent = state.jobs.filter(function (j) { return jobMatchesFilters(j, { urgentOnly: true }); });
-        addMsg("bot", "마감이 가까운 공고예요 (D-3 이내):" + jobListHtml(urgent, 6));
-        return;
-      }
-
-      // 신규
-      if (/신규|새로운|새 공고|오늘 올라온/.test(q)) {
-        var news = state.jobs.filter(function (j) { return jobMatchesFilters(j, { newOnly: true }); });
-        addMsg("bot", "오늘 새로 들어온 공고예요:" + jobListHtml(news, 6));
-        return;
-      }
-
-      // 지역
-      var regionHit = null;
-      Object.keys(REGION_WORDS).forEach(function (k) { if (q.indexOf(k) !== -1) regionHit = k; });
-
-      // 사이트
-      var siteHit = null;
-      SITE_WORDS.forEach(function (s) { if (q.indexOf(s) !== -1) siteHit = s; });
-
-      if (regionHit || siteHit) {
-        var filtered = state.jobs.filter(function (j) {
-          var ok = jobMatchesFilters(j, { site: siteHit || "전체" });
-          if (ok && regionHit) ok = (j.location || "").indexOf(regionHit) !== -1 || j.condition.indexOf(regionHit) !== -1;
-          return ok;
-        });
-        if (siteHit) { state.site = siteHit; buildSiteFilters(Array.from(new Set(state.jobs.map(function(j){return j.site;})))); }
-        render();
-        var label = [siteHit, regionHit].filter(Boolean).join(" · ");
-        addMsg("bot", (label || "조건") + " 공고예요:" + jobListHtml(filtered, 6));
-        return;
-      }
-
-      // 키워드 검색 (회로설계, 품질관리 등 직무 키워드 그대로 검색창에 반영)
-      var keyword = q.replace(/(공고|보여줘|찾아줘|알려줘|좀|해줘|줄래|있어)/g, "").trim();
-      if (keyword) {
-        state.q = keyword;
-        document.getElementById("searchBox").value = keyword;
-        render();
-        var matched = state.jobs.filter(function (j) { return jobMatchesFilters(j); });
-        addMsg("bot", '"' + keyword + '" 로 찾아봤어요:' + jobListHtml(matched, 6));
-        return;
-      }
-
-      addMsg("bot", "이렇게 물어보면 찾아드려요 — \"마감임박 공고\", \"경기 지역 신규\", \"원티드 회로설계\" 처럼요.");
+      fetch(CHAT_API, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          message: q,
+          jobs: state.jobs,
+          history: apiHistory.slice(0, -1).slice(-6),
+        }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          thinking.remove();
+          var reply = data.reply || "답을 못 받았어요. 다시 물어봐줄래요?";
+          addMsg("bot", reply);
+          apiHistory.push({ role: "bot", content: reply });
+        })
+        .catch(function (err) {
+          thinking.remove();
+          addMsg("bot", "연결이 잠깐 안 됐어요. 네트워크 확인하고 다시 물어봐줄래요?");
+          console.error(err);
+        })
+        .finally(function () { setBusy(false); input.focus(); });
     }
 
-    var SUGGESTS = ["마감임박 공고 보여줘", "경기 지역만", "신규 공고", "원티드 회로설계", "전체 보기"];
+    var SUGGESTS = ["마감임박 공고 추천해줘", "경기 지역만 보여줘", "신규 공고 요약해줘", "회로설계 경력 살릴 수 있는 공고 있어?"];
     SUGGESTS.forEach(function (s) {
       var b = document.createElement("button");
       b.className = "suggest-chip";
@@ -702,7 +673,7 @@
     fab.addEventListener("click", function () {
       panel.hidden = false;
       if (messages.children.length === 0) {
-        addMsg("bot", "안녕, 건우! 리스트 안에서 바로 찾아줄게. 아래 버튼 눌러보거나 직접 물어봐.");
+        addMsg("bot", "안녕, 건우! 오늘 올라온 공고 중에서 바로 찾아줄게. 아래 버튼 눌러보거나 자유롭게 물어봐.");
       }
       input.focus();
     });
