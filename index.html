@@ -79,6 +79,63 @@
   .hero h1 .name { color: var(--accent); }
   .hero .pep { font-size: 13.5px; color: var(--text-muted); margin: 0; line-height: 1.6; }
 
+  .letter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 4px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 13px;
+    font-family: var(--sans);
+    cursor: pointer;
+  }
+  .letter-btn svg { width: 15px; height: 15px; }
+  .letter-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  #letterOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  #letterOverlay[hidden] { display: none; }
+  #letterCard {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 32px 24px 28px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  }
+  #letterClose {
+    position: absolute;
+    top: 12px; right: 12px;
+    border: none; background: var(--surface-sunken); color: var(--text-muted);
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 14px;
+  }
+  #letterEnvelope {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0 8px;
+    cursor: pointer;
+    color: var(--accent);
+  }
+  #letterEnvelope svg { width: 56px; height: 56px; }
+  #letterEnvelope p { margin: 0; font-size: 13.5px; color: var(--text-muted); }
+  #letterBody { font-size: 14.5px; line-height: 1.9; color: var(--text); white-space: pre-wrap; padding: 6px 2px; }
+  #letterBody[hidden] { display: none; }
+
   header.controls-bar {
     position: sticky;
     top: env(safe-area-inset-top, 0px);
@@ -255,6 +312,10 @@
 <div class="wrap">
   <div class="hero">
     <h1><span class="name">누누</span>야 힘내, 제발 나를 위해서 최선을 다해줘..</h1>
+    <button id="letterBtn" class="letter-btn" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      너에게 온 편지
+    </button>
   </div>
 
   <header class="controls-bar">
@@ -294,6 +355,17 @@
       인크루트는 <a href="https://search.incruit.com/list/search.asp?col=job" target="_blank" rel="noopener">검색 페이지로 바로가기</a>를 둘게요.
     </p>
   </footer>
+</div>
+
+<div id="letterOverlay" hidden>
+  <div id="letterCard">
+    <button id="letterClose" aria-label="닫기">✕</button>
+    <div id="letterEnvelope">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      <p>눌러서 편지를 열어보세요</p>
+    </div>
+    <div id="letterBody" hidden></div>
+  </div>
 </div>
 
 <button id="chatFab" aria-label="공고 도우미 열기" title="공고 도우미">
@@ -485,6 +557,41 @@
       document.getElementById("countLine").textContent = "";
       console.error(err);
     });
+
+  // ---------------- 편지 ----------------
+  function initLetter() {
+    var LETTER_TEXT = "건우야 많이 힘들지 ... \n너의 잘못이 아니니까 힘내\n음 .. 좋은 날 올거야 ...\n나는 내가 하고싶은 것들을 못하고 살게 될거야 그게 내가 너를 선택한 대가라고 생각해";
+
+    var openBtn = document.getElementById("letterBtn");
+    var overlay = document.getElementById("letterOverlay");
+    var closeBtn = document.getElementById("letterClose");
+    var envelope = document.getElementById("letterEnvelope");
+    var body = document.getElementById("letterBody");
+    var opened = false;
+
+    function showOverlay() {
+      overlay.hidden = false;
+      envelope.hidden = false;
+      body.hidden = true;
+      opened = false;
+    }
+
+    envelope.addEventListener("click", function () {
+      if (opened) return;
+      opened = true;
+      body.textContent = LETTER_TEXT;
+      envelope.hidden = true;
+      body.hidden = false;
+    });
+
+    openBtn.addEventListener("click", showOverlay);
+    closeBtn.addEventListener("click", function () { overlay.hidden = true; });
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) overlay.hidden = true;
+    });
+  }
+
+  initLetter();
 
   // ---------------- 공고 도우미 (Claude API 연동, 실패 시 규칙 기반 폴백) ----------------
   var CHAT_API = "https://job-radar-chat.rhgkssk1114.workers.dev/chat";
