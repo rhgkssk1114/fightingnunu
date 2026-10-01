@@ -629,6 +629,56 @@
       sendBtn.textContent = busy ? "…" : "보내기";
     }
 
+    // AI 서버가 아직 안 붙어있거나 응답이 없을 때 쓰는 규칙 기반 대체 답변
+    var SITE_WORDS = ["사람인", "잡코리아", "원티드", "캐치"];
+    var REGION_WORDS = ["서울", "경기"];
+
+    function jobListText(jobs, limit) {
+      var shown = jobs.slice(0, limit || 5);
+      if (shown.length === 0) return "조건에 맞는 공고를 못 찾았어요.";
+      var lines = shown.map(function (j) {
+        var badge = j.urgent ? " [D-" + j.dday + "]" : (j.is_new ? " [NEW]" : "");
+        return "· " + j.title + " · " + j.company + badge + "\n  " + j.link;
+      });
+      var out = lines.join("\n");
+      if (jobs.length > shown.length) out += "\n외 " + (jobs.length - shown.length) + "건 더 있어요.";
+      return out;
+    }
+
+    function localAnswer(q) {
+      var lower = q.toLowerCase();
+      if (/마감임박|곧 마감|디데이|d-day|dday/.test(lower)) {
+        var urgent = state.jobs.filter(function (j) { return jobMatchesFilters(j, { urgentOnly: true }); });
+        return "마감이 가까운 공고예요 (D-3 이내):\n" + jobListText(urgent, 6);
+      }
+      if (/신규|새로운|새 공고|오늘 올라온/.test(q)) {
+        var news = state.jobs.filter(function (j) { return jobMatchesFilters(j, { newOnly: true }); });
+        return "오늘 새로 들어온 공고예요:\n" + jobListText(news, 6);
+      }
+      var regionHit = null;
+      REGION_WORDS.forEach(function (k) { if (q.indexOf(k) !== -1) regionHit = k; });
+      var siteHit = null;
+      SITE_WORDS.forEach(function (s) { if (q.indexOf(s) !== -1) siteHit = s; });
+      if (regionHit || siteHit) {
+        var filtered = state.jobs.filter(function (j) {
+          var ok = jobMatchesFilters(j, { site: siteHit || "전체" });
+          if (ok && regionHit) ok = (j.location || "").indexOf(regionHit) !== -1 || (j.condition || "").indexOf(regionHit) !== -1;
+          return ok;
+        });
+        var label = [siteHit, regionHit].filter(Boolean).join(" · ");
+        return (label || "조건") + " 공고예요:\n" + jobListText(filtered, 6);
+      }
+      var keyword = q.replace(/(공고|보여줘|찾아줘|알려줘|추천해줘|좀|해줘|줄래|있어)/g, "").trim();
+      if (keyword) {
+        var matched = state.jobs.filter(function (j) {
+          var hay = (j.title + " " + j.company).toLowerCase();
+          return hay.indexOf(keyword.toLowerCase()) !== -1;
+        });
+        return '"' + keyword + '" 로 찾아봤어요:\n' + jobListText(matched, 6);
+      }
+      return "이렇게 물어보면 찾아드려요 — \"마감임박 공고\", \"경기 지역 신규\", \"원티드 회로설계\" 처럼요.";
+    }
+
     function handleQuery(text) {
       var q = text.trim();
       if (!q) return;
@@ -649,13 +699,15 @@
         .then(function (r) { return r.json(); })
         .then(function (data) {
           thinking.remove();
-          var reply = data.reply || "답을 못 받았어요. 다시 물어봐줄래요?";
+          var reply = (data && data.reply) ? data.reply : localAnswer(q);
           addMsg("bot", reply);
           apiHistory.push({ role: "bot", content: reply });
         })
         .catch(function (err) {
           thinking.remove();
-          addMsg("bot", "연결이 잠깐 안 됐어요. 네트워크 확인하고 다시 물어봐줄래요?");
+          var reply = localAnswer(q);
+          addMsg("bot", reply);
+          apiHistory.push({ role: "bot", content: reply });
           console.error(err);
         })
         .finally(function () { setBusy(false); input.focus(); });

@@ -83,16 +83,22 @@ async function handleChat(request, env) {
     messages,
   };
 
-  // sk-ant-api03-... 키는 x-api-key, 다른 발급 형태는 Authorization: Bearer 를 요구하는 경우가 있어
-  // 첫 시도가 거부되면 다른 인증 방식으로 한 번 더 시도한다.
+  const attempts = [];
   let anthropicRes = await callAnthropic(env, payload, "apikey");
-  if (anthropicRes.status === 403) {
-    anthropicRes = await callAnthropic(env, payload, "bearer");
+  attempts.push(`apikey=${anthropicRes.status}`);
+  if (!anthropicRes.ok) {
+    const second = await callAnthropic(env, payload, "bearer");
+    attempts.push(`bearer=${second.status}`);
+    if (second.ok) {
+      anthropicRes = second;
+    } else {
+      anthropicRes = second;
+    }
   }
 
   if (!anthropicRes.ok) {
     const errText = await anthropicRes.text();
-    return new Response(JSON.stringify({ error: "upstream_error", detail: errText.slice(0, 500) }), {
+    return new Response(JSON.stringify({ error: "upstream_error", attempts, detail: errText.slice(0, 500) }), {
       status: 502,
     });
   }
