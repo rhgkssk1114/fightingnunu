@@ -1,1255 +1,1433 @@
 {
-  "updated_at": "2026-10-02T01:45:51.635250+09:00",
-  "updated_at_display": "2026-10-02 01:45",
+  "updated_at": "2026-10-02T02:29:51.181373+09:00",
+  "updated_at_display": "2026-10-02 02:29",
   "total": 189,
   "new_count": 89,
   "urgent_count": 7,
   "jobs": [
     {
-      "id": "95ca72bb3cd66ec2",
+      "id": "c461b5e094deb59a",
       "site": "사람인",
       "title": "[외국계 전기전자] B2B 영업(대리,과장)",
       "company": "(주)더라이징스타헤딩",
       "location": "서울",
       "condition": "서울 강남구 경력 4~12년 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55081991&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55081991&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-04",
       "dday": 2,
       "is_new": true,
-      "urgent": true
+      "urgent": true,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%8D%94%EB%9D%BC%EC%9D%B4%EC%A7%95%EC%8A%A4%ED%83%80%ED%97%A4%EB%94%A9"
     },
     {
-      "id": "b46b616b2cf13a7f",
+      "id": "9d8bfc3470e372d5",
       "site": "사람인",
       "title": "[반도체 IP 회로설계 팹리스 기업] Analog IC 회로설계 담당",
       "company": "(주)브이비젼",
       "location": "서울",
       "condition": "서울 서초구 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55125456&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55125456&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-04",
       "dday": 2,
       "is_new": true,
-      "urgent": true
+      "urgent": true,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%B8%8C%EC%9D%B4%EB%B9%84%EC%A0%BC"
     },
     {
-      "id": "95bfef7bb26048bf",
+      "id": "253c2d6247406a3c",
       "site": "사람인",
       "title": "파미셀(주) GMP 품질팀 품질관리 담당자모집",
       "company": "파미셀(주)",
       "location": "경기",
       "condition": "경기 성남시 중원구 신입 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54945339&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54945339&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-04",
       "dday": 2,
       "is_new": true,
-      "urgent": true
+      "urgent": true,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%8C%8C%EB%AF%B8%EC%85%80%28%EC%A3%BC%29"
     },
     {
-      "id": "85fe592238a6522e",
+      "id": "f1310745e958bf26",
       "site": "사람인",
       "title": "[원진일렉트로닉스] 회로설계 담당 채용(경력)",
       "company": "(주)원진일렉트로닉스",
       "location": "경기",
       "condition": "경기 수원시 영통구 경력 5~15년 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54823358&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54823358&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-05",
       "dday": 3,
       "is_new": true,
-      "urgent": true
+      "urgent": true,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%9B%90%EC%A7%84%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A1%9C%EB%8B%89%EC%8A%A4"
     },
     {
-      "id": "f4e488a69b0a74e9",
+      "id": "ca638b13f6e497be",
       "site": "사람인",
       "title": "자동화 설비 회로설계 경력직 채용",
       "company": "(주)에이앤아이",
       "location": "경기",
       "condition": "경기 수원시 권선구 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54672058&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54672058&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-05",
       "dday": 3,
       "is_new": true,
-      "urgent": true
+      "urgent": true,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%97%90%EC%9D%B4%EC%95%A4%EC%95%84%EC%9D%B4"
     },
     {
-      "id": "1eede53b61290f57",
+      "id": "34425cf91f24cc1d",
       "site": "사람인",
       "title": "대일시스템 하반기 부문별 채용(연구개발,국내영업,생산관리,생산직)",
       "company": "대일시스템",
       "location": "경기",
       "condition": "경기 용인시 처인구 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54880924&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54880924&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-10-05",
       "dday": 3,
       "is_new": true,
-      "urgent": true
+      "urgent": true,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8C%80%EC%9D%BC%EC%8B%9C%EC%8A%A4%ED%85%9C"
     },
     {
-      "id": "68cde9a165b8498a",
+      "id": "b998fd2505df6385",
       "site": "사람인",
       "title": "반도체 장비부품 [KSM그룹] 생산관리/품질관리 채용",
       "company": "(주)케이에스엠",
       "location": "경기",
       "condition": "경기 김포시 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55146507&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55146507&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-10-05",
       "dday": 3,
       "is_new": true,
-      "urgent": true
+      "urgent": true,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%BC%80%EC%9D%B4%EC%97%90%EC%8A%A4%EC%97%A0"
     },
     {
-      "id": "064517417634559e",
+      "id": "0079e86a15f1b9f0",
       "site": "사람인",
       "title": "HW/FW 회로설계 개발자",
       "company": "아이씨티케이(주)",
       "location": "서울",
       "condition": "서울 강남구 경력 5~10년 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54957837&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54957837&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-07",
       "dday": 5,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EC%9D%B4%EC%94%A8%ED%8B%B0%EC%BC%80%EC%9D%B4%28%EC%A3%BC%29"
     },
     {
-      "id": "6791ff8c1f649c33",
+      "id": "889f9938a96e25a4",
       "site": "사람인",
       "title": "설비관리(시설)-반도체 장비 제조업체",
       "company": "(주)드림에이치알",
       "location": "서울",
       "condition": "서울 서초구 경력10년↑ 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55129381&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55129381&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": "2026-10-07",
       "dday": 5,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%93%9C%EB%A6%BC%EC%97%90%EC%9D%B4%EC%B9%98%EC%95%8C"
     },
     {
-      "id": "617837ab4088aa5c",
+      "id": "4e55cac99275646e",
       "site": "사람인",
       "title": "[중견식품기업/오창] 식품공장 공무팀 설비관리 과,차장급",
       "company": "(주)스텝씨",
       "location": "서울",
       "condition": "서울 강남구 경력10년↑ 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55116094&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55116094&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": "2026-10-08",
       "dday": 6,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%8A%A4%ED%85%9D%EC%94%A8"
     },
     {
-      "id": "8acb17793ac71972",
+      "id": "69a3901e5ea0bf1a",
       "site": "사람인",
       "title": "위성·레이더 HW 개발 엔지니어 (FPGA·회로설계) (3-13년)",
       "company": "(주)에델웨이",
       "location": "경기",
       "condition": "경기 하남시 경력3년↑ 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55115486&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55115486&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-09",
       "dday": 7,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%97%90%EB%8D%B8%EC%9B%A8%EC%9D%B4"
     },
     {
-      "id": "f7c0183f005bbc5e",
+      "id": "7f6a0f36f9ff89b6",
       "site": "사람인",
       "title": "전력전자회로설계제작경력직원채용합니다.",
       "company": "(주)대영초음파",
       "location": "경기",
       "condition": "경기 부천시 원미구 경력 5~10년 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54694472&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54694472&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-09",
       "dday": 7,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%8C%80%EC%98%81%EC%B4%88%EC%9D%8C%ED%8C%8C"
     },
     {
-      "id": "4409277e6afb1aa4",
+      "id": "24f08fa2b448b2fa",
       "site": "사람인",
       "title": "회로설계(전원분야) 연구소 신입 및 경력사원 모집",
       "company": "에스피일레멕",
       "location": "경기",
       "condition": "경기 안산시 상록구 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54714764&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54714764&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-10",
       "dday": 8,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EC%8A%A4%ED%94%BC%EC%9D%BC%EB%A0%88%EB%A9%95"
     },
     {
-      "id": "497641f4248bb7bc",
+      "id": "d48830f8954c8acc",
       "site": "사람인",
       "title": "[Intertek] 전기전자제품 안전 인증 시험원 모집",
       "company": "인터텍이티엘셈코㈜",
       "location": "경기",
       "condition": "경기 군포시 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55007604&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55007604&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9D%B8%ED%84%B0%ED%85%8D%EC%9D%B4%ED%8B%B0%EC%97%98%EC%85%88%EC%BD%94%E3%88%9C"
     },
     {
-      "id": "ff18f99cf3c27431",
+      "id": "78840dce8cad8cb3",
       "site": "사람인",
       "title": "회로설계/펌웨어개발/해외영업/AI솔루션영업 경력직",
       "company": "(주)비솔",
       "location": "서울",
       "condition": "서울 금천구 경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55001811&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55001811&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%B9%84%EC%86%94"
     },
     {
-      "id": "0ba348cb94782d68",
+      "id": "e572949455667b61",
       "site": "사람인",
       "title": "[센서뷰]연구소 RF회로설계 우수인력 모집",
       "company": "(주)센서뷰",
       "location": "경기",
       "condition": "경기 화성시 동탄구 경력6년↑ 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55030978&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55030978&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%84%BC%EC%84%9C%EB%B7%B0"
     },
     {
-      "id": "3ca85a8798a9cfb4",
+      "id": "458026bd6ee6553c",
       "site": "사람인",
       "title": "[엔코스] 제조·생산관리·상품기획팀·구매·품질보증·경영기획·경영지원 채용",
       "company": "(주)엔코스",
       "location": "경기",
       "condition": "경기 오산시 신입·경력 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54973142&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54973142&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%97%94%EC%BD%94%EC%8A%A4"
     },
     {
-      "id": "8b1adc7380349ebb",
+      "id": "a7bc8c6f4cc5f226",
       "site": "사람인",
       "title": "삼천당제약 품질관리(QC) 신입 및 경력직 채용",
       "company": "삼천당제약(주)",
       "location": "경기",
       "condition": "경기 화성시 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55135324&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55135324&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%82%BC%EC%B2%9C%EB%8B%B9%EC%A0%9C%EC%95%BD%28%EC%A3%BC%29"
     },
     {
-      "id": "f1ecb07b110a2692",
+      "id": "def7c41dccf52d46",
       "site": "사람인",
       "title": "영업,영업기획,영업지원,JAVA개발,고객지원,생산기술 모집",
       "company": "(주)에이치에스씨엠티",
       "location": "경기",
       "condition": "경기 용인시 기흥구 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55126761&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55126761&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%97%90%EC%9D%B4%EC%B9%98%EC%97%90%EC%8A%A4%EC%94%A8%EC%97%A0%ED%8B%B0"
     },
     {
-      "id": "2809d267bf683597",
+      "id": "4f372bd9552a202b",
       "site": "사람인",
       "title": "품질관리팀 모집 (제품시험)",
       "company": "고려제약(주)",
       "location": "경기",
       "condition": "경기 이천시 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55134106&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55134106&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-12",
       "dday": 10,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EA%B3%A0%EB%A0%A4%EC%A0%9C%EC%95%BD%28%EC%A3%BC%29"
     },
     {
-      "id": "75a8330529a9c560",
+      "id": "942c3dcc5ad14b43",
       "site": "사람인",
       "title": "코스닥 양자보안업체 반도체 HW/FW 회로설계 5-10년",
       "company": "(주)모스원",
       "location": "서울",
       "condition": "서울 강남구 경력 5~10년 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55128188&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55128188&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-13",
       "dday": 11,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%AA%A8%EC%8A%A4%EC%9B%90"
     },
     {
-      "id": "feb0a2cdacc5d16b",
+      "id": "6e9897cc014ed310",
       "site": "사람인",
       "title": "(주)메카로 생산기술팀 채용(소재,표면처리,분석)",
       "company": "(주)메카로",
       "location": "경기",
       "condition": "경기 평택시 경력2년↑ 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54754689&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54754689&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": "2026-10-13",
       "dday": 11,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%A9%94%EC%B9%B4%EB%A1%9C"
     },
     {
-      "id": "41b51d1dbd24b1e2",
+      "id": "cfeac2d456671c21",
       "site": "사람인",
       "title": "다우실란트산업(주) 실란트 연구원, 공무(설비관리) 채용",
       "company": "다우실란트산업(주)",
       "location": "경기",
       "condition": "경기 화성시 신입·경력 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55075456&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55075456&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": "2026-10-13",
       "dday": 11,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8B%A4%EC%9A%B0%EC%8B%A4%EB%9E%80%ED%8A%B8%EC%82%B0%EC%97%85%28%EC%A3%BC%29"
     },
     {
-      "id": "805072e28cdcb011",
+      "id": "78452cac21abb248",
       "site": "사람인",
       "title": "(주)피에스텍 기술연구소 신입 및 경력사원 모집(전기전자)",
       "company": "(주)피에스텍",
       "location": "경기",
       "condition": "경기 군포시 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55029018&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55029018&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-14",
       "dday": 12,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%94%BC%EC%97%90%EC%8A%A4%ED%85%8D"
     },
     {
-      "id": "b771383502f4aab9",
+      "id": "ed012cb2c8e2d7f5",
       "site": "사람인",
       "title": "(오산) 전기전자부품 현장입출고 정규직",
       "company": "한국알프스물류(주)",
       "location": "경기",
       "condition": "경기 오산시 경력무관 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55178040&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55178040&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-14",
       "dday": 12,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%EA%B5%AD%EC%95%8C%ED%94%84%EC%8A%A4%EB%AC%BC%EB%A5%98%28%EC%A3%BC%29"
     },
     {
-      "id": "4694e0e9d909d45d",
+      "id": "db2e98a3aa40db3e",
       "site": "사람인",
       "title": "[GS리테일 자회사]후레쉬서브 생산관리 채용",
       "company": "(주)후레쉬서브",
       "location": "경기",
       "condition": "경기 오산시 신입·경력 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55170768&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55170768&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-10-14",
       "dday": 12,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%9B%84%EB%A0%88%EC%89%AC%EC%84%9C%EB%B8%8C"
     },
     {
-      "id": "4e43add5a0e09679",
+      "id": "199b64269f3590f5",
       "site": "사람인",
       "title": "[송탄/정규] 전기전자 분야 장비 사전준비 / 기구조립 인원 모집",
       "company": "(주)파워팩터스",
       "location": "경기",
       "condition": "경기 평택시 경력무관 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55037957&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55037957&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-15",
       "dday": 13,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%8C%8C%EC%9B%8C%ED%8C%A9%ED%84%B0%EC%8A%A4"
     },
     {
-      "id": "a58952d4f452c6ed",
+      "id": "96795386c0352cf5",
       "site": "사람인",
       "title": "[파워팩터스] 전기전자(S/W) 부설연구소 연구원 모집",
       "company": "(주)파워팩터스",
       "location": "경기",
       "condition": "경기 평택시 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55037939&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55037939&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-15",
       "dday": 13,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%8C%8C%EC%9B%8C%ED%8C%A9%ED%84%B0%EC%8A%A4"
     },
     {
-      "id": "7a02cd1ee04cb05b",
+      "id": "fd3dd2a5de3870fc",
       "site": "사람인",
       "title": "[파워팩터스] 전기전자(H/W) 부설연구소 신입/경력 연구원  모집",
       "company": "(주)파워팩터스",
       "location": "경기",
       "condition": "경기 평택시 신입·경력 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55037923&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55037923&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-15",
       "dday": 13,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%8C%8C%EC%9B%8C%ED%8C%A9%ED%84%B0%EC%8A%A4"
     },
     {
-      "id": "06dd5be968ea2c91",
+      "id": "d623fb2b028f074e",
       "site": "사람인",
       "title": "[신입&경력] Probe Card 회로설계 부분 엔지니어 채용",
       "company": "(주)코리아인스트루먼트",
       "location": "경기",
       "condition": "경기 화성시 동탄구 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55051657&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55051657&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-16",
       "dday": 14,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%BD%94%EB%A6%AC%EC%95%84%EC%9D%B8%EC%8A%A4%ED%8A%B8%EB%A3%A8%EB%A8%BC%ED%8A%B8"
     },
     {
-      "id": "cbb567bc6656b0f2",
+      "id": "feffebdb6a102ec6",
       "site": "사람인",
       "title": "기아자동차 1차협력사 품질관리팀 관리직 신입,경력 직원 모집",
       "company": "풍기산업(주)",
       "location": "경기",
       "condition": "경기 평택시 신입·경력 초대졸↑ 정규직 4,580 만원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55050644&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55050644&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-16",
       "dday": 14,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%92%8D%EA%B8%B0%EC%82%B0%EC%97%85%28%EC%A3%BC%29"
     },
     {
-      "id": "acb9bfb7c04a1a3c",
+      "id": "f48ef074106a188a",
       "site": "사람인",
       "title": "단암시스템즈 연구개발 회로설계,펌웨어,RF설계 신입/경력 모집",
       "company": "단암시스템즈(주)",
       "location": "경기",
       "condition": "경기 안양시 동안구 신입·경력 대졸↑ 정규직 4,350 만원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55063810&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55063810&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-17",
       "dday": 15,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8B%A8%EC%95%94%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%A6%88%28%EC%A3%BC%29"
     },
     {
-      "id": "0ad4e2bea8fded90",
+      "id": "23f9fb981f0e6422",
       "site": "사람인",
       "title": "2026 네네치킨 생산본부 채용 (생산관리팀, 물류관리팀, 지원팀, 연구개발실)",
       "company": "(주)혜인식품",
       "location": "서울",
       "condition": "서울 도봉구 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55146486&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55146486&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-10-18",
       "dday": 16,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%98%9C%EC%9D%B8%EC%8B%9D%ED%92%88"
     },
     {
-      "id": "d2b1345bfc3e2946",
+      "id": "4fac6ca462558b21",
       "site": "사람인",
       "title": "각 부문별 (영업관리/재경/MD/구매/사출/품질관리/생산관리) 채용",
       "company": "(주)풍안",
       "location": "경기",
       "condition": "경기 화성시 경력5년↑ 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55144353&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55144353&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-10-18",
       "dday": 16,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%92%8D%EC%95%88"
     },
     {
-      "id": "f783254be094c67b",
+      "id": "bfea69e687d5a812",
       "site": "사람인",
       "title": "각 부문별 (영업관리/재경/MD/구매/사출/품질관리/생산관리) 채용",
       "company": "(주)풍안",
       "location": "경기",
       "condition": "경기 화성시 경력5년↑ 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55144353&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55144353&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-18",
       "dday": 16,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%92%8D%EC%95%88"
     },
     {
-      "id": "f2d44918879327f3",
+      "id": "7e67bd9c526be62d",
       "site": "사람인",
       "title": "기술연구소_전기전자(박사이상)채용-코스닥 상장사",
       "company": "(주)딜리",
       "location": "경기",
       "condition": "경기 동두천시 신입·경력 박사 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55103725&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55103725&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-21",
       "dday": 19,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%94%9C%EB%A6%AC"
     },
     {
-      "id": "eeb393b2781a0def",
+      "id": "4f9828ddbf06a8e4",
       "site": "사람인",
       "title": "품질관리팀 미생물pt 및 제품 품질pt 채용의 건",
       "company": "대한뉴팜(주)",
       "location": "경기",
       "condition": "경기 화성시 만세구 경력무관 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55089936&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55089936&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-21",
       "dday": 19,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8C%80%ED%95%9C%EB%89%B4%ED%8C%9C%28%EC%A3%BC%29"
     },
     {
-      "id": "2ff6720ff1a2adb9",
+      "id": "6336629ef0181fad",
       "site": "사람인",
       "title": "의료기기 제조/생산기술 담당자 채용",
       "company": "(주)씨어스",
       "location": "경기",
       "condition": "경기 평택시 경력 5~10년 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55088246&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55088246&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": "2026-10-21",
       "dday": 19,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%94%A8%EC%96%B4%EC%8A%A4"
     },
     {
-      "id": "a49e93443b4cc46c",
+      "id": "0299980ce9c1fbfc",
       "site": "사람인",
       "title": "전기전자 반도체 기술 엔지니어",
       "company": "(주)라이트전자",
       "location": "서울",
       "condition": "서울 금천구 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55108116&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55108116&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-22",
       "dday": 20,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%9D%BC%EC%9D%B4%ED%8A%B8%EC%A0%84%EC%9E%90"
     },
     {
-      "id": "56175fb8b5f04a8b",
+      "id": "a3c338177f24b229",
       "site": "사람인",
       "title": "[싸이몬] H/W 설계, 회로설계 담당 신입/경력 채용",
       "company": "(주)싸이몬",
       "location": "경기",
       "condition": "경기 용인시 수지구 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55104044&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55104044&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-22",
       "dday": 20,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%8B%B8%EC%9D%B4%EB%AA%AC"
     },
     {
-      "id": "c43eb0d74e256120",
+      "id": "9b42b3243e62fadd",
       "site": "사람인",
       "title": "[화일약품] 반월사업장 품질관리팀(QC) 신입/경력 모집",
       "company": "화일약품(주)",
       "location": "경기",
       "condition": "경기 안산시 단원구 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55102628&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55102628&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-22",
       "dday": 20,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%99%94%EC%9D%BC%EC%95%BD%ED%92%88%28%EC%A3%BC%29"
     },
     {
-      "id": "c392f76237e4fcac",
+      "id": "3934cd1bf2bf8f2b",
       "site": "사람인",
       "title": "케이엠아이시스템(주) 신입 및 경력-하드웨어(전기전자 전공자)",
       "company": "케이엠아이시스템(주)",
       "location": "경기",
       "condition": "경기 성남시 중원구 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55111246&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55111246&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-23",
       "dday": 21,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BC%80%EC%9D%B4%EC%97%A0%EC%95%84%EC%9D%B4%EC%8B%9C%EC%8A%A4%ED%85%9C%28%EC%A3%BC%29"
     },
     {
-      "id": "00f6c64d1ed6d09e",
+      "id": "db697f4abd3fb1a3",
       "site": "사람인",
       "title": "아남전자(주) 연구소(회로설계) 경력 채용",
       "company": "아남전자(주)",
       "location": "서울",
       "condition": "서울 구로구 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54880452&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54880452&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-23",
       "dday": 21,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EB%82%A8%EC%A0%84%EC%9E%90%28%EC%A3%BC%29"
     },
     {
-      "id": "efad7dd5279a54ca",
+      "id": "e85f2b638ba2098c",
       "site": "사람인",
       "title": "(주)벡스 H/W 개발자(회로설계) 경력 채용 공고",
       "company": "(주)벡스",
       "location": "서울",
       "condition": "서울 금천구 경력 3~15년 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54846599&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54846599&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-24",
       "dday": 22,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%B2%A1%EC%8A%A4"
     },
     {
-      "id": "02d0c65156615ba1",
+      "id": "69e61f5757d1bcea",
       "site": "사람인",
       "title": "[향남] 비보존제약 품질관리팀 경력 채용",
       "company": "(주)비보존제약",
       "location": "경기",
       "condition": "경기 화성시 경력 4~8년 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55031458&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55031458&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-25",
       "dday": 23,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%B9%84%EB%B3%B4%EC%A1%B4%EC%A0%9C%EC%95%BD"
     },
     {
-      "id": "8a9856b6b61f55f4",
+      "id": "7983279f2f30f39d",
       "site": "사람인",
       "title": "[KLP특허법률사무소] 특허명세서/특허선행조사 (전기전자IT)",
       "company": "케이엘피특허법률사무소",
       "location": "서울",
       "condition": "서울 강남구 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55128996&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55128996&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-28",
       "dday": 26,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BC%80%EC%9D%B4%EC%97%98%ED%94%BC%ED%8A%B9%ED%97%88%EB%B2%95%EB%A5%A0%EC%82%AC%EB%AC%B4%EC%86%8C"
     },
     {
-      "id": "84f7270c5b57e669",
+      "id": "30ad8e986ece0d75",
       "site": "사람인",
       "title": "[Analog] SerDes/Analog IC 회로설계 경력자 채용 (차부장급)",
       "company": "(주)아나패스",
       "location": "서울",
       "condition": "서울 구로구 경력10년↑ 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55133614&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55133614&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-28",
       "dday": 26,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%95%84%EB%82%98%ED%8C%A8%EC%8A%A4"
     },
     {
-      "id": "fc471b1a61359a79",
+      "id": "981607c85c90b98f",
       "site": "사람인",
       "title": "HW 회로설계 엔지니어 채용",
       "company": "(주)에스씨솔루션글로벌",
       "location": "경기",
       "condition": "경기 용인시 기흥구 경력 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55131528&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55131528&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-28",
       "dday": 26,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%97%90%EC%8A%A4%EC%94%A8%EC%86%94%EB%A3%A8%EC%85%98%EA%B8%80%EB%A1%9C%EB%B2%8C"
     },
     {
-      "id": "37a0cbea16c27d10",
+      "id": "d835abf32ebbcc1a",
       "site": "사람인",
       "title": "3차원측정&품질검사원&품질관리外 정규직 모집(신입, 경력)",
       "company": "(주)코멕스카본",
       "location": "경기",
       "condition": "경기 안성시 경력무관 고졸↑ 정규직 3,600 만원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55132179&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55132179&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-10-28",
       "dday": 26,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%BD%94%EB%A9%95%EC%8A%A4%EC%B9%B4%EB%B3%B8"
     },
     {
-      "id": "cc4bb6c50030c19c",
+      "id": "5d24340f06d6eebb",
       "site": "사람인",
       "title": "생산본부 기계설비관리자 채용",
       "company": "(주)일진코스메틱",
       "location": "경기",
       "condition": "경기 시흥시 경력무관 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55126606&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55126606&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": "2026-10-28",
       "dday": 26,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%9D%BC%EC%A7%84%EC%BD%94%EC%8A%A4%EB%A9%94%ED%8B%B1"
     },
     {
-      "id": "89aadc724f24fe50",
+      "id": "b48bbde95f76cc41",
       "site": "사람인",
       "title": "[전기전자,반도체]특허조사/분석 - 신입, 경력 모집",
       "company": "(주)아이피풀",
       "location": "서울",
       "condition": "서울 금천구 경력무관 대졸↑ 정규직 3,500 만원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55148705&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55148705&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-29",
       "dday": 27,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%95%84%EC%9D%B4%ED%94%BC%ED%92%80"
     },
     {
-      "id": "13e2220d69d9f5eb",
+      "id": "f822f68aa3d41c34",
       "site": "사람인",
       "title": "(주)아이디티 기술연구소 회로설계 팀원 채용 공고",
       "company": "(주)아이디티",
       "location": "경기",
       "condition": "경기 화성시 동탄구 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55147622&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55147622&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-29",
       "dday": 27,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%95%84%EC%9D%B4%EB%94%94%ED%8B%B0"
     },
     {
-      "id": "2b439762f6c11058",
+      "id": "4270806195b3d4c8",
       "site": "사람인",
       "title": "[주4.5일/코스닥상장] 센서 회로설계 경력직 모집",
       "company": "(주)삼영에스앤씨",
       "location": "경기",
       "condition": "경기 성남시 중원구 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55141845&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55141845&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-29",
       "dday": 27,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%82%BC%EC%98%81%EC%97%90%EC%8A%A4%EC%95%A4%EC%94%A8"
     },
     {
-      "id": "01c68f534bbb57ed",
+      "id": "eb4ecaae27ca35e9",
       "site": "사람인",
       "title": "코스맥스엔비티(주) 이천공장 생산기술팀 [공무팀] 사원 모집",
       "company": "코스맥스엔비티(주)",
       "location": "경기",
       "condition": "경기 이천시 신입·경력 고졸↑ 정규직 3,640 만원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55144198&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55144198&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": "2026-10-29",
       "dday": 27,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BD%94%EC%8A%A4%EB%A7%A5%EC%8A%A4%EC%97%94%EB%B9%84%ED%8B%B0%28%EC%A3%BC%29"
     },
     {
-      "id": "71a8b19aa1bbb2de",
+      "id": "482242ecef1052b0",
       "site": "사람인",
       "title": "설비관리,생산,공정관리 대리/과장급 채용",
       "company": "(주)아테쿠토코리아",
       "location": "경기",
       "condition": "경기 평택시 경력4년↑ 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55150222&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55150222&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": "2026-10-29",
       "dday": 27,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%95%84%ED%85%8C%EC%BF%A0%ED%86%A0%EC%BD%94%EB%A6%AC%EC%95%84"
     },
     {
-      "id": "010418b5bdd5f6a3",
+      "id": "3f990af590a220ba",
       "site": "사람인",
       "title": "국내 전기전자 중견기업 총무팀 인사담당, 대리과장급",
       "company": "자바스서치주식회사",
       "location": "경기",
       "condition": "경기 성남시 분당구 경력 5~10년 대졸↑ 정규직 4,500 만원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55158430&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55158430&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-30",
       "dday": 28,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9E%90%EB%B0%94%EC%8A%A4%EC%84%9C%EC%B9%98%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
     },
     {
-      "id": "38b0ae3aeb7527d6",
+      "id": "983b38880e21f835",
       "site": "사람인",
       "title": "연구소 회로설계 채용",
       "company": "(주)옵토전자",
       "location": "경기",
       "condition": "경기 시흥시 경력3년↑ 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55146863&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55146863&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-30",
       "dday": 28,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%98%B5%ED%86%A0%EC%A0%84%EC%9E%90"
     },
     {
-      "id": "c234b63b7d38a035",
+      "id": "7dae1f6d648b306d",
       "site": "사람인",
       "title": "레조낙코리아(주) 평택공장 연마재료생산기술부 생산기술 채용",
       "company": "레조낙코리아(주)",
       "location": "경기",
       "condition": "경기 평택시 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55158957&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55158957&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": "2026-10-30",
       "dday": 28,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A0%88%EC%A1%B0%EB%82%99%EC%BD%94%EB%A6%AC%EC%95%84%28%EC%A3%BC%29"
     },
     {
-      "id": "0bc4a68912c6f4fd",
+      "id": "17dea41ccf58f13f",
       "site": "사람인",
       "title": "설비관리,생산,공정관리 대리/과장급 채용(일본어 가능자)",
       "company": "(주)아테쿠토코리아",
       "location": "경기",
       "condition": "경기 평택시 경력4년↑ 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54902252&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54902252&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": "2026-10-30",
       "dday": 28,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%95%84%ED%85%8C%EC%BF%A0%ED%86%A0%EC%BD%94%EB%A6%AC%EC%95%84"
     },
     {
-      "id": "586fa270f47bd7f9",
+      "id": "7518f0a6e4599e42",
       "site": "사람인",
       "title": "제조설비관리, 공정관리사원 채용(평택)",
       "company": "(주)아테쿠토코리아",
       "location": "경기",
       "condition": "경기 평택시 경력무관 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54902799&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54902799&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": "2026-10-30",
       "dday": 28,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%95%84%ED%85%8C%EC%BF%A0%ED%86%A0%EC%BD%94%EB%A6%AC%EC%95%84"
     },
     {
-      "id": "6bb14de3ed308c6c",
+      "id": "b7314fee8aa426cf",
       "site": "사람인",
       "title": "전기전자부품(자동차 계열) 개발 업무 배우면서 일할 신입 모집.",
       "company": "더가우스(주)",
       "location": "경기",
       "condition": "경기 용인시 기흥구 경력무관 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55177569&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55177569&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8D%94%EA%B0%80%EC%9A%B0%EC%8A%A4%28%EC%A3%BC%29"
     },
     {
-      "id": "fd98beb7dd49d93f",
+      "id": "43fdf9a38e5b7e50",
       "site": "사람인",
       "title": "(주)미래엔글로벌 영업지원 채용 - 전기전자부품 및 화학제품",
       "company": "(주)미래엔글로벌",
       "location": "서울",
       "condition": "서울 서초구 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55120863&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55120863&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%AF%B8%EB%9E%98%EC%97%94%EA%B8%80%EB%A1%9C%EB%B2%8C"
     },
     {
-      "id": "df293e8d7c3e2059",
+      "id": "13e1beba17b9486b",
       "site": "사람인",
       "title": "(주)피엠티 회로설계그룹 신입/경력 채용(안양 근무)",
       "company": "(주)피엠티",
       "location": "경기",
       "condition": "경기 안양시 동안구 신입·경력 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55170763&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55170763&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%94%BC%EC%97%A0%ED%8B%B0"
     },
     {
-      "id": "b1847e062f201892",
+      "id": "17376aefc9490291",
       "site": "사람인",
       "title": "[테크윙 자회사] 회로설계 신입 모집",
       "company": "(주)이엔씨테크놀로지",
       "location": "경기",
       "condition": "경기 화성시 신입 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55171956&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55171956&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%9D%B4%EC%97%94%EC%94%A8%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80"
     },
     {
-      "id": "fab4e04aeef37380",
+      "id": "aa6f9b4cfcd6c21f",
       "site": "사람인",
       "title": "Display 관련 장비 하드웨어 개발인력 채용(보드,회로설계)-서울",
       "company": "(주)탑런에이피솔루션",
       "location": "서울",
       "condition": "서울 구로구 경력무관 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55172942&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55172942&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%83%91%EB%9F%B0%EC%97%90%EC%9D%B4%ED%94%BC%EC%86%94%EB%A3%A8%EC%85%98"
     },
     {
-      "id": "d8d35b7bbd7c85bb",
+      "id": "f4e514b5dda7007e",
       "site": "사람인",
       "title": "[서울] 시스템개발팀, 시험분석팀 직원 모집 (회로설계, 시험)",
       "company": "인코어테크놀로지(주)",
       "location": "서울",
       "condition": "서울 성동구 경력무관 초대졸↑ 정규직 3,200 만원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55170453&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55170453&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9D%B8%EC%BD%94%EC%96%B4%ED%85%8C%ED%81%AC%EB%86%80%EB%A1%9C%EC%A7%80%28%EC%A3%BC%29"
     },
     {
-      "id": "b18569f6bf957b09",
+      "id": "fd95e16178a0810f",
       "site": "사람인",
       "title": "연구·R&D(연구개발/기구설계/ 회로설계) 모집합니다",
       "company": "유니온하이테크",
       "location": "경기",
       "condition": "경기 화성시 경력무관 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55175109&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55175109&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9C%A0%EB%8B%88%EC%98%A8%ED%95%98%EC%9D%B4%ED%85%8C%ED%81%AC"
     },
     {
-      "id": "290be2ebc7e4351d",
+      "id": "8ea35d6271a7551b",
       "site": "사람인",
       "title": "[삼성반도체 1차협력사] 뉴엠텍 생산관리 경력직(4년 이상) 채용",
       "company": "(주)뉴엠텍",
       "location": "경기",
       "condition": "경기 화성시 효행구 경력 4~7년 초대졸↑ 정규직·기간제",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55105645&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55105645&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%89%B4%EC%97%A0%ED%85%8D"
     },
     {
-      "id": "578c7722a2de878b",
+      "id": "b692c5b20e95dff2",
       "site": "사람인",
       "title": "생산기술팀/제조팀 채용",
       "company": "삼지전자(주)",
       "location": "경기",
       "condition": "경기 화성시 동탄구 신입·경력 고졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54596018&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54596018&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": "2026-11-01",
       "dday": 30,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%82%BC%EC%A7%80%EC%A0%84%EC%9E%90%28%EC%A3%BC%29"
     },
     {
-      "id": "6fe12bccad444154",
+      "id": "44a9bca9d9b28084",
       "site": "사람인",
       "title": "HW 개발 엔지니어 신입 채용 (회로설계)",
       "company": "(주)블루버드",
       "location": "서울",
       "condition": "서울 강남구 신입 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55000897&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55000897&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-11-09",
       "dday": 38,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%B8%94%EB%A3%A8%EB%B2%84%EB%93%9C"
     },
     {
-      "id": "c582a7683ef41017",
+      "id": "804198f094ebfb6d",
       "site": "사람인",
       "title": "[와이즈] 연구소 전자팀 개발자 채용 (회로설계/MCU/C언어)",
       "company": "(주)와이즈",
       "location": "경기",
       "condition": "경기 용인시 기흥구 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55000213&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55000213&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": "2026-11-09",
       "dday": 38,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%99%80%EC%9D%B4%EC%A6%88"
     },
     {
-      "id": "317563ec5ac04026",
+      "id": "7cc7a84ce7f94b16",
       "site": "사람인",
       "title": "기술사업/국내사업/해외사업/생산관리/품질관리 각 부문 채용 공고",
       "company": "(주)보우테이프",
       "location": "경기",
       "condition": "경기 화성시 신입·경력 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55040565&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=a958690a-dea4-4a85-b029-064dd278693a",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55040565&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=9b312aa4-a73e-4e23-8cc2-42e1163f9934",
       "query": "생산관리",
       "deadline": "2026-11-15",
       "dday": 44,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%B3%B4%EC%9A%B0%ED%85%8C%EC%9D%B4%ED%94%84"
     },
     {
-      "id": "4ffdd435872cc1eb",
+      "id": "e4643bf6d3c1c5f5",
       "site": "사람인",
       "title": "기술사업/국내사업/해외사업/생산관리/품질관리 각 부문 채용 공고",
       "company": "(주)보우테이프",
       "location": "경기",
       "condition": "경기 화성시 신입·경력 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55040565&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55040565&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": "2026-11-15",
       "dday": 44,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%B3%B4%EC%9A%B0%ED%85%8C%EC%9D%B4%ED%94%84"
     },
     {
-      "id": "8c40f64b98433521",
+      "id": "168e43dd60f7d8c3",
       "site": "사람인",
       "title": "연구부문(H/W설계), 생산부문(생산관리팀,생산기술팀,생산팀,구미연구소), 품질보증팀 채용",
       "company": "(주)디지트론",
       "location": "경기",
       "condition": "경기 성남시 수정구 신입·경력 학력무관 정규직·전문연구요원",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55132456&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55132456&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=n&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": "2026-11-30",
       "dday": 59,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EB%94%94%EC%A7%80%ED%8A%B8%EB%A1%A0"
     },
     {
-      "id": "b245025e15f638e2",
+      "id": "69d39d7cd73dfac9",
       "site": "사람인",
       "title": "세창쎄미콘(주) 전기전자 기술영업 모집",
       "company": "세창쎄미콘(주)",
       "location": "서울",
       "condition": "서울 구로구 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55171852&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55171852&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%84%B8%EC%B0%BD%EC%8E%84%EB%AF%B8%EC%BD%98%28%EC%A3%BC%29"
     },
     {
-      "id": "66ca1c1d409fcf3a",
+      "id": "925d851f0da6131c",
       "site": "사람인",
       "title": "기구/전기전자 설계 경력직 채용",
       "company": "뉴모텍㈜",
       "location": "경기",
       "condition": "경기 군포시 경력5년↑ 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54869169&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54869169&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%89%B4%EB%AA%A8%ED%85%8D%E3%88%9C"
     },
     {
-      "id": "1d26ef15192fd294",
+      "id": "d07611e4b1bb80f9",
       "site": "사람인",
       "title": "전기전자 및 펌웨어 엔지니어 채용",
       "company": "(주)어밸브",
       "location": "경기",
       "condition": "경기 성남시 중원구 경력무관 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54831167&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=5638d60f-710b-4591-938f-81ad65d9bc50",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54831167&location=ts&searchword=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&searchType=search&paid_fl=n&search_uuid=fd1efa74-38ea-4fa7-8ea5-63b104128063",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%96%B4%EB%B0%B8%EB%B8%8C"
     },
     {
-      "id": "4797902496e49d56",
+      "id": "5de2d39527566e58",
       "site": "사람인",
       "title": "(주)프론틱스 - 회로설계/HW개발 엔지니어 채용",
       "company": "(주)프론틱스",
       "location": "서울",
       "condition": "서울 금천구 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54650252&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54650252&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%94%84%EB%A1%A0%ED%8B%B1%EC%8A%A4"
     },
     {
-      "id": "ce9e689c3ab61f68",
+      "id": "3e055a7545474c91",
       "site": "사람인",
       "title": "아날로그·디지털회로설계 H/W엔지니어(FMCW LiDAR)(신입·경력)",
       "company": "람다이노비전(주)",
       "location": "경기",
       "condition": "경기 화성시 동탄구 경력무관 대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54911174&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54911174&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%9E%8C%EB%8B%A4%EC%9D%B4%EB%85%B8%EB%B9%84%EC%A0%84%28%EC%A3%BC%29"
     },
     {
-      "id": "a5ae51d23a0c7a22",
+      "id": "0fab6500952b7cdb",
       "site": "사람인",
       "title": "자동차 조명부품 회로설계 개발 담당자 채용",
       "company": "대영전기(주)",
       "location": "경기",
       "condition": "경기 평택시 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55074451&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=01e7315d-f6e5-4db0-a523-6b849af819bd",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55074451&location=ts&searchword=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&searchType=search&paid_fl=n&search_uuid=e7dd05d4-6b02-4fd1-ad63-97b85284d87f",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8C%80%EC%98%81%EC%A0%84%EA%B8%B0%28%EC%A3%BC%29"
     },
     {
-      "id": "5161623fb75eadd1",
+      "id": "e0aed756d53aa4d0",
       "site": "사람인",
       "title": "[코스피 상장사] 소프트스타터 자재·생산·품질관리 담당 모집",
       "company": "산일전기(주)",
       "location": "경기",
       "condition": "경기 안산시 단원구 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55143958&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55143958&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%82%B0%EC%9D%BC%EC%A0%84%EA%B8%B0%28%EC%A3%BC%29"
     },
     {
-      "id": "db00700d0328093f",
+      "id": "3687a54c98a809dc",
       "site": "사람인",
       "title": "[반도체사업부 발안(예정)] 품질관리 담당(QC) 신입 및 경력모집",
       "company": "(주)텍슨",
       "location": "경기",
       "condition": "경기 화성시 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55103849&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55103849&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%ED%85%8D%EC%8A%A8"
     },
     {
-      "id": "f13ca4d6dd479445",
+      "id": "b06b0fbb7cfdf657",
       "site": "사람인",
       "title": "설비보전팀/기획팀/R&D센터(소재개발/품질관리)/브랜드전략팀",
       "company": "코스틱폼텍(주)",
       "location": "경기",
       "condition": "경기 파주시 신입·경력 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55025226&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7819fc70-3f7b-488b-be29-88474ed0abef",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55025226&location=ts&searchword=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=126960a9-f223-49e7-be56-1c968f25aa74",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BD%94%EC%8A%A4%ED%8B%B1%ED%8F%BC%ED%85%8D%28%EC%A3%BC%29"
     },
     {
-      "id": "2b6199d5c9703a57",
+      "id": "6ca7569917034f98",
       "site": "사람인",
       "title": "대영전기 정규직(관리자)채용-생산기술팀",
       "company": "대영전기(주)",
       "location": "경기",
       "condition": "경기 평택시 경력5년↑ 학력무관 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55093008&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=y&search_uuid=dd31daf2-7704-445a-8b88-770b1c1d97f3",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55093008&location=ts&searchword=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&searchType=search&paid_fl=y&search_uuid=ddae0206-6ad9-466a-b4f4-d23523505104",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8C%80%EC%98%81%EC%A0%84%EA%B8%B0%28%EC%A3%BC%29"
     },
     {
-      "id": "348285343b2793c0",
+      "id": "f17acee91c505331",
       "site": "사람인",
       "title": "[파주전기초자] 설비관리반 기능직(정규직) 모집",
       "company": "파주전기초자㈜",
       "location": "경기",
       "condition": "경기 파주시 경력 1~3년 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55007186&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55007186&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%8C%8C%EC%A3%BC%EC%A0%84%EA%B8%B0%EC%B4%88%EC%9E%90%E3%88%9C"
     },
     {
-      "id": "f9a3996c2e8a0d2a",
+      "id": "7259c0db8fb34c7e",
       "site": "사람인",
       "title": "[성능점검] 한국기계설비관리 성능점검팀 정규직 채용",
       "company": "한국기계설비관리(주)",
       "location": "경기",
       "condition": "경기 화성시 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54926399&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54926399&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%EA%B5%AD%EA%B8%B0%EA%B3%84%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC%28%EC%A3%BC%29"
     },
     {
-      "id": "e7f95d5c3bb8cc06",
+      "id": "0ef325d516d03fd0",
       "site": "사람인",
       "title": "생산기술 채용모집(제조공정, 설비관리)",
       "company": "(주)아침해의료기",
       "location": "경기",
       "condition": "경기 화성시 경력1년↑ 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54741467&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=54741467&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%EC%95%84%EC%B9%A8%ED%95%B4%EC%9D%98%EB%A3%8C%EA%B8%B0"
     },
     {
-      "id": "1ef029f023067750",
+      "id": "50768e125419eac6",
       "site": "사람인",
       "title": "전기시설 설비관리 담당자",
       "company": "(주) 케이와이씨지(KYCG)",
       "location": "경기",
       "condition": "경기 군포시 경력무관 초대졸↑ 정규직",
-      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55061643&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=8bc1df3d-8aff-4fe0-8eba-b37e658192e9",
+      "company_size": null,
+      "link": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=search&rec_idx=55061643&location=ts&searchword=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&searchType=search&paid_fl=n&search_uuid=7d0d43cc-2519-4d0c-82a2-1dac8c7b1ae0",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%28%EC%A3%BC%29%20%EC%BC%80%EC%9D%B4%EC%99%80%EC%9D%B4%EC%94%A8%EC%A7%80%28KYCG%29"
     },
     {
-      "id": "668a836b09bf759b",
+      "id": "2bc5e388173c9a79",
       "site": "잡코리아",
       "title": "(주)연우뉴매틱 품질 담당자 채용 (경력)",
-      "company": "",
-      "location": "",
-      "condition": "스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 경력3년↑",
-      "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50046549?Oem_Code=C1&logpath=1&stext=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&listno=1&sc=551&traceId=879f611e7737e06d818de05d130940fb",
+      "company": "㈜연우뉴매틱",
+      "location": "경기 시흥시 외 5",
+      "condition": "경기 시흥시 외 5 · 스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 경력3년↑",
+      "company_size": null,
+      "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50046549?Oem_Code=C1&logpath=1&stext=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&listno=1&sc=551&traceId=4579f15c14b486524ed5e994fd0111fb",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": true,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%E3%88%9C%EC%97%B0%EC%9A%B0%EB%89%B4%EB%A7%A4%ED%8B%B1"
     },
     {
       "id": "7d704badea6b5d7e",
@@ -1258,12 +1436,14 @@
       "company": "우리엔",
       "location": "경기 화성시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/375594",
       "query": "전기전자",
       "deadline": "2026-10-09",
       "dday": 7,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9A%B0%EB%A6%AC%EC%97%94"
     },
     {
       "id": "c7a0bb9d3643f5f7",
@@ -1272,12 +1452,14 @@
       "company": "미원상사",
       "location": "경기/전북/충북/충남",
       "condition": "정규직 · 경력",
+      "company_size": "중견기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574244",
       "query": "품질관리",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%AF%B8%EC%9B%90%EC%83%81%EC%82%AC"
     },
     {
       "id": "351c5b80ccc6b62f",
@@ -1286,12 +1468,14 @@
       "company": "한솔아이원스",
       "location": "경기",
       "condition": "정규직 · 경력",
+      "company_size": "중견기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574143",
       "query": "품질관리",
       "deadline": "2026-10-11",
       "dday": 9,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%EC%86%94%EC%95%84%EC%9D%B4%EC%9B%90%EC%8A%A4"
     },
     {
       "id": "2d3aec7ed308540c",
@@ -1300,12 +1484,14 @@
       "company": "데일리앤코",
       "location": "서울",
       "condition": "정규직 · 경력",
+      "company_size": "중견기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574030",
       "query": "품질관리",
       "deadline": "2026-10-12",
       "dday": 10,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8D%B0%EC%9D%BC%EB%A6%AC%EC%95%A4%EC%BD%94"
     },
     {
       "id": "26fc509c35537a70",
@@ -1314,12 +1500,14 @@
       "company": "성신양회",
       "location": "서울/기타해외",
       "condition": "정규직 · 경력",
+      "company_size": "중견기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574187",
       "query": "품질관리",
       "deadline": "2026-10-14",
       "dday": 12,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%84%B1%EC%8B%A0%EC%96%91%ED%9A%8C"
     },
     {
       "id": "343826fe5b78757e",
@@ -1328,12 +1516,14 @@
       "company": "삼립",
       "location": "경기/서울/충북/충남/부산/경남/경북/대구/울산/전북/전남광주",
       "condition": "정규직 · None",
+      "company_size": "대기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574022",
       "query": "품질관리",
       "deadline": "2026-10-14",
       "dday": 12,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%82%BC%EB%A6%BD"
     },
     {
       "id": "99de411428c67e19",
@@ -1342,12 +1532,14 @@
       "company": "한국서부발전",
       "location": "충남/인천/경기",
       "condition": "정규직 · None",
+      "company_size": "공기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574010",
       "query": "품질관리",
       "deadline": "2026-10-14",
       "dday": 12,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%EA%B5%AD%EC%84%9C%EB%B6%80%EB%B0%9C%EC%A0%84"
     },
     {
       "id": "41c12996baa26880",
@@ -1356,12 +1548,14 @@
       "company": "풀무원",
       "location": "경기/충북",
       "condition": "정규직 · 경력",
+      "company_size": "중견기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574081",
       "query": "생산기술",
       "deadline": "2026-10-18",
       "dday": 16,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%92%80%EB%AC%B4%EC%9B%90"
     },
     {
       "id": "c31d551631c2357a",
@@ -1370,12 +1564,14 @@
       "company": "한국콜마",
       "location": "세종/서울",
       "condition": "정규직 · 경력",
+      "company_size": "중견기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=574051",
       "query": "품질관리",
       "deadline": "2026-10-18",
       "dday": 16,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%EA%B5%AD%EC%BD%9C%EB%A7%88"
     },
     {
       "id": "957b98dfbf790a0e",
@@ -1384,12 +1580,14 @@
       "company": "삼지전자",
       "location": "경기",
       "condition": "정규직 · 경력무관/경력",
+      "company_size": "중견기업",
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=566677",
       "query": "생산기술",
       "deadline": "2026-10-18",
       "dday": 16,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%82%BC%EC%A7%80%EC%A0%84%EC%9E%90"
     },
     {
       "id": "9275e9fdd20fbd1b",
@@ -1398,12 +1596,14 @@
       "company": "폴라리스세원",
       "location": "경기 화성시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/388794",
       "query": "생산관리",
       "deadline": "2026-10-22",
       "dday": 20,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%8F%B4%EB%9D%BC%EB%A6%AC%EC%8A%A4%EC%84%B8%EC%9B%90"
     },
     {
       "id": "8542d6d7eecba92e",
@@ -1412,12 +1612,14 @@
       "company": "폴라리스세원",
       "location": "경기 평택시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/388799",
       "query": "설비관리",
       "deadline": "2026-10-31",
       "dday": 29,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%8F%B4%EB%9D%BC%EB%A6%AC%EC%8A%A4%EC%84%B8%EC%9B%90"
     },
     {
       "id": "51d11a16813d1985",
@@ -1426,12 +1628,14 @@
       "company": "신세계I&C",
       "location": "경기",
       "condition": "정규직 · 경력",
+      "company_size": null,
       "link": "https://www.catch.co.kr/NCS/RecruitDetail?RecruitID=564921",
       "query": "설비관리",
       "deadline": "2026-12-31",
       "dday": 90,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%8B%A0%EC%84%B8%EA%B3%84I%26C"
     },
     {
       "id": "958b5ed38eeec334",
@@ -1440,12 +1644,14 @@
       "company": "아날로그에이아이",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/349720",
       "query": "회로설계",
       "deadline": "2027-03-19",
       "dday": 168,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%EC%97%90%EC%9D%B4%EC%95%84%EC%9D%B4"
     },
     {
       "id": "78ce853ecfecc68f",
@@ -1454,12 +1660,14 @@
       "company": "아날로그에이아이",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/349721",
       "query": "회로설계",
       "deadline": "2027-03-19",
       "dday": 168,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%EC%97%90%EC%9D%B4%EC%95%84%EC%9D%B4"
     },
     {
       "id": "be4db756a7a37231",
@@ -1468,12 +1676,14 @@
       "company": "오토엘(AutoL)",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/91552",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%98%A4%ED%86%A0%EC%97%98%28AutoL%29"
     },
     {
       "id": "dc610cffd367a46e",
@@ -1482,12 +1692,14 @@
       "company": "보스반도체",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/347516",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%B3%B4%EC%8A%A4%EB%B0%98%EB%8F%84%EC%B2%B4"
     },
     {
       "id": "5ee18baa2e1989ce",
@@ -1496,12 +1708,14 @@
       "company": "씨드로닉스",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/366929",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%94%A8%EB%93%9C%EB%A1%9C%EB%8B%89%EC%8A%A4"
     },
     {
       "id": "392be6344ccf0a86",
@@ -1510,12 +1724,14 @@
       "company": "에타일렉트로닉스",
       "location": "서울 용산구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/366256",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%ED%83%80%EC%9D%BC%EB%A0%89%ED%8A%B8%EB%A1%9C%EB%8B%89%EC%8A%A4"
     },
     {
       "id": "00ab4c32e478f5ed",
@@ -1524,12 +1740,14 @@
       "company": "스페이스린텍",
       "location": "경기 용인시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/343420",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4%EB%A6%B0%ED%85%8D"
     },
     {
       "id": "08325c23c134ef5d",
@@ -1538,12 +1756,14 @@
       "company": "메디인테크",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/334857",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A9%94%EB%94%94%EC%9D%B8%ED%85%8C%ED%81%AC"
     },
     {
       "id": "9f324f3d3cc52c2f",
@@ -1552,12 +1772,14 @@
       "company": "오에이큐",
       "location": "서울 강서구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/318075",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%98%A4%EC%97%90%EC%9D%B4%ED%81%90"
     },
     {
       "id": "47da9e2d2a64975d",
@@ -1566,12 +1788,14 @@
       "company": "리옵스(LiOps)",
       "location": "서울 성동구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/365632",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A6%AC%EC%98%B5%EC%8A%A4%28LiOps%29"
     },
     {
       "id": "f11823e1be183cf6",
@@ -1580,12 +1804,14 @@
       "company": "메디인테크",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/334848",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A9%94%EB%94%94%EC%9D%B8%ED%85%8C%ED%81%AC"
     },
     {
       "id": "84c9d7a0b7ea6671",
@@ -1594,12 +1820,14 @@
       "company": "에니아이(Aniai)",
       "location": "서울 성동구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/349608",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EB%8B%88%EC%95%84%EC%9D%B4%28Aniai%29"
     },
     {
       "id": "290bd765497202e6",
@@ -1608,12 +1836,14 @@
       "company": "테슬라(Tesla)",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/361307",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%85%8C%EC%8A%AC%EB%9D%BC%28Tesla%29"
     },
     {
       "id": "85b956e03fead1ad",
@@ -1622,12 +1852,14 @@
       "company": "한화그룹 (Hanwha)",
       "location": "경기 용인시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387706",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%ED%99%94%EA%B7%B8%EB%A3%B9%20%28Hanwha%29"
     },
     {
       "id": "20032f17ce3101bd",
@@ -1636,12 +1868,14 @@
       "company": "테슬라(Tesla)",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/363991",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%85%8C%EC%8A%AC%EB%9D%BC%28Tesla%29"
     },
     {
       "id": "d9889a01ea340350",
@@ -1650,12 +1884,14 @@
       "company": "엑시나",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/352412",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%91%EC%8B%9C%EB%82%98"
     },
     {
       "id": "f35f56bfa1911f51",
@@ -1664,12 +1900,14 @@
       "company": "아이언디바이스",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/270929",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EC%9D%B4%EC%96%B8%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4"
     },
     {
       "id": "d86f39618983e97b",
@@ -1678,12 +1916,14 @@
       "company": "엔젤로보틱스",
       "location": "서울 광진구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/363935",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%94%EC%A0%A4%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4"
     },
     {
       "id": "48c5a4d2b9dc014f",
@@ -1692,12 +1932,14 @@
       "company": "엔도로보틱스",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/234469",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%94%EB%8F%84%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4"
     },
     {
       "id": "fa3811501222bd93",
@@ -1706,12 +1948,14 @@
       "company": "비엔에스알(BNSR)",
       "location": "경기 수원시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/382568",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%B9%84%EC%97%94%EC%97%90%EC%8A%A4%EC%95%8C%28BNSR%29"
     },
     {
       "id": "5f54703f97b0eeed",
@@ -1720,12 +1964,14 @@
       "company": "리보틱스",
       "location": "경기 시흥시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/366628",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A6%AC%EB%B3%B4%ED%8B%B1%EC%8A%A4"
     },
     {
       "id": "0037f6ba19db2bba",
@@ -1734,12 +1980,14 @@
       "company": "와트(watt)",
       "location": "서울 송파구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/310503",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%99%80%ED%8A%B8%28watt%29"
     },
     {
       "id": "8f9424eea9b912e4",
@@ -1748,12 +1996,14 @@
       "company": "아이씨티케이",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/383199",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EC%9D%B4%EC%94%A8%ED%8B%B0%EC%BC%80%EC%9D%B4"
     },
     {
       "id": "6f35733fd4a0b837",
@@ -1762,12 +2012,14 @@
       "company": "닷",
       "location": "서울 금천구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/124026",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8B%B7"
     },
     {
       "id": "ac7ca29bcd5859eb",
@@ -1776,12 +2028,14 @@
       "company": "한화그룹 (Hanwha)",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387723",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%ED%99%94%EA%B7%B8%EB%A3%B9%20%28Hanwha%29"
     },
     {
       "id": "00de68409be84930",
@@ -1790,12 +2044,14 @@
       "company": "한화그룹 (Hanwha)",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387738",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%ED%99%94%EA%B7%B8%EB%A3%B9%20%28Hanwha%29"
     },
     {
       "id": "14db355bfdf88ed1",
@@ -1804,12 +2060,14 @@
       "company": "한화그룹 (Hanwha)",
       "location": "경기 용인시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387701",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%ED%99%94%EA%B7%B8%EB%A3%B9%20%28Hanwha%29"
     },
     {
       "id": "ff4465ff52052c9f",
@@ -1818,12 +2076,14 @@
       "company": "폴라리스쓰리디(Polaris3D)",
       "location": "서울 구로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/385170",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%8F%B4%EB%9D%BC%EB%A6%AC%EC%8A%A4%EC%93%B0%EB%A6%AC%EB%94%94%28Polaris3D%29"
     },
     {
       "id": "07270d25ecf2e216",
@@ -1832,12 +2092,14 @@
       "company": "경인전자",
       "location": "서울 금천구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/370765",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EA%B2%BD%EC%9D%B8%EC%A0%84%EC%9E%90"
     },
     {
       "id": "e270b7f24a14b7ae",
@@ -1846,12 +2108,14 @@
       "company": "아이코어",
       "location": "경기 안양시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/196835",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EC%9D%B4%EC%BD%94%EC%96%B4"
     },
     {
       "id": "c62c4af9d79420e3",
@@ -1860,12 +2124,14 @@
       "company": "폴라리스쓰리디(Polaris3D)",
       "location": "서울 구로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/380335",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%8F%B4%EB%9D%BC%EB%A6%AC%EC%8A%A4%EC%93%B0%EB%A6%AC%EB%94%94%28Polaris3D%29"
     },
     {
       "id": "65f19589e7b0ab5b",
@@ -1874,12 +2140,14 @@
       "company": "루마인홈",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/379575",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A3%A8%EB%A7%88%EC%9D%B8%ED%99%88"
     },
     {
       "id": "1a4e1fea2b1e720f",
@@ -1888,12 +2156,14 @@
       "company": "딥다이브",
       "location": "서울 성동구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387097",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%94%A5%EB%8B%A4%EC%9D%B4%EB%B8%8C"
     },
     {
       "id": "bfc467e6e211b676",
@@ -1902,12 +2172,14 @@
       "company": "퓨어스페이스",
       "location": "서울 금천구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/389769",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%93%A8%EC%96%B4%EC%8A%A4%ED%8E%98%EC%9D%B4%EC%8A%A4"
     },
     {
       "id": "0fe4dd9c61d76875",
@@ -1916,12 +2188,14 @@
       "company": "비더블유그룹",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/375659",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%B9%84%EB%8D%94%EB%B8%94%EC%9C%A0%EA%B7%B8%EB%A3%B9"
     },
     {
       "id": "c7dcc0b9f9ac06a4",
@@ -1930,12 +2204,14 @@
       "company": "코자",
       "location": "서울 성동구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/360347",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BD%94%EC%9E%90"
     },
     {
       "id": "3581c98c0abe110b",
@@ -1944,12 +2220,14 @@
       "company": "코코지",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/340702",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BD%94%EC%BD%94%EC%A7%80"
     },
     {
       "id": "415cbf3e8a13b3e1",
@@ -1958,12 +2236,14 @@
       "company": "동구밭",
       "location": "경기 하남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/380480",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8F%99%EA%B5%AC%EB%B0%AD"
     },
     {
       "id": "b150de57e2fcf459",
@@ -1972,12 +2252,14 @@
       "company": "클레로보틱스",
       "location": "경기 군포시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/333553",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%81%B4%EB%A0%88%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4"
     },
     {
       "id": "0fc9befff132f721",
@@ -1986,12 +2268,14 @@
       "company": "블루개러지(Blue Garage)",
       "location": "서울 강동구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/385050",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%B8%94%EB%A3%A8%EA%B0%9C%EB%9F%AC%EC%A7%80%28Blue%20Garage%29"
     },
     {
       "id": "e4ed92d194dbab1d",
@@ -2000,12 +2284,14 @@
       "company": "클래시스",
       "location": "서울 송파구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/378724",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%81%B4%EB%9E%98%EC%8B%9C%EC%8A%A4"
     },
     {
       "id": "a9f01e897e34c59f",
@@ -2014,12 +2300,14 @@
       "company": "아렌시아",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/379789",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EB%A0%8C%EC%8B%9C%EC%95%84"
     },
     {
       "id": "2fd3449b692f5213",
@@ -2028,12 +2316,14 @@
       "company": "메디인테크",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/384927",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A9%94%EB%94%94%EC%9D%B8%ED%85%8C%ED%81%AC"
     },
     {
       "id": "ccf5f4266cf5d173",
@@ -2042,12 +2332,14 @@
       "company": "제노스",
       "location": "경기 수원시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/371859",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%A0%9C%EB%85%B8%EC%8A%A4"
     },
     {
       "id": "6f3a22d825fb45b2",
@@ -2056,12 +2348,14 @@
       "company": "와이즐리컴퍼니",
       "location": "서울 서초구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/385666",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%99%80%EC%9D%B4%EC%A6%90%EB%A6%AC%EC%BB%B4%ED%8D%BC%EB%8B%88"
     },
     {
       "id": "462cd90ee36efe47",
@@ -2070,12 +2364,14 @@
       "company": "와이즐리컴퍼니",
       "location": "서울 서초구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/390095",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%99%80%EC%9D%B4%EC%A6%90%EB%A6%AC%EC%BB%B4%ED%8D%BC%EB%8B%88"
     },
     {
       "id": "f18124901dc462bd",
@@ -2084,12 +2380,14 @@
       "company": "이노서스",
       "location": "경기 안양시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/384424",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9D%B4%EB%85%B8%EC%84%9C%EC%8A%A4"
     },
     {
       "id": "1ca32200920f9c2a",
@@ -2098,12 +2396,14 @@
       "company": "씨제이올리브영(CJ올리브영)",
       "location": "서울 용산구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/388110",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%94%A8%EC%A0%9C%EC%9D%B4%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%28CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%29"
     },
     {
       "id": "3961944a0b8afa98",
@@ -2112,12 +2412,14 @@
       "company": "매니코어소프트",
       "location": "서울 구로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/388108",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A7%A4%EB%8B%88%EC%BD%94%EC%96%B4%EC%86%8C%ED%94%84%ED%8A%B8"
     },
     {
       "id": "4d0425fd721d8927",
@@ -2126,12 +2428,14 @@
       "company": "취팡",
       "location": "서울 중구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/382020",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%B7%A8%ED%8C%A1"
     },
     {
       "id": "b49aee5b6684963d",
@@ -2140,12 +2444,14 @@
       "company": "씨제이올리브영(CJ올리브영)",
       "location": "서울 용산구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/381612",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%94%A8%EC%A0%9C%EC%9D%B4%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%28CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%29"
     },
     {
       "id": "4ecfb7b6e282c5f1",
@@ -2154,12 +2460,14 @@
       "company": "더파운더즈",
       "location": "경기 이천시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/381259",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8D%94%ED%8C%8C%EC%9A%B4%EB%8D%94%EC%A6%88"
     },
     {
       "id": "c9629bc68fa53dc6",
@@ -2168,12 +2476,14 @@
       "company": "씨제이올리브영(CJ올리브영)",
       "location": "서울 용산구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/381616",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%94%A8%EC%A0%9C%EC%9D%B4%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%28CJ%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%29"
     },
     {
       "id": "b42b589fe59f7025",
@@ -2182,12 +2492,14 @@
       "company": "유모스원",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/372682",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9C%A0%EB%AA%A8%EC%8A%A4%EC%9B%90"
     },
     {
       "id": "83795735b2e83030",
@@ -2196,12 +2508,14 @@
       "company": "동구밭",
       "location": "경기 하남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/346223",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%8F%99%EA%B5%AC%EB%B0%AD"
     },
     {
       "id": "c327a148fb8287e9",
@@ -2210,12 +2524,14 @@
       "company": "써모아이",
       "location": "서울 동작구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/389324",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%8D%A8%EB%AA%A8%EC%95%84%EC%9D%B4"
     },
     {
       "id": "3d6190325b6c394d",
@@ -2224,12 +2540,14 @@
       "company": "엔도로보틱스",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/323983",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%94%EB%8F%84%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4"
     },
     {
       "id": "7abff8d8e3b5f6fd",
@@ -2238,12 +2556,14 @@
       "company": "이노서스",
       "location": "경기 안양시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387864",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9D%B4%EB%85%B8%EC%84%9C%EC%8A%A4"
     },
     {
       "id": "e4fdbfd17872a405",
@@ -2252,12 +2572,14 @@
       "company": "클래시스",
       "location": "서울 송파구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/376452",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%81%B4%EB%9E%98%EC%8B%9C%EC%8A%A4"
     },
     {
       "id": "7aafe729dc59d88d",
@@ -2266,12 +2588,14 @@
       "company": "현대자동차그룹 (HYUNDAI)",
       "location": "경기 성남시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387500",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%98%84%EB%8C%80%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B7%B8%EB%A3%B9%20%28HYUNDAI%29"
     },
     {
       "id": "a67159e4a7dc28e1",
@@ -2280,12 +2604,14 @@
       "company": "위로보틱스",
       "location": "서울 송파구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/385372",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%9C%84%EB%A1%9C%EB%B3%B4%ED%8B%B1%EC%8A%A4"
     },
     {
       "id": "e5233e09b79d2a82",
@@ -2294,12 +2620,14 @@
       "company": "로아스",
       "location": "서울 송파구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/380743",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A1%9C%EC%95%84%EC%8A%A4"
     },
     {
       "id": "caff337694a3e413",
@@ -2308,12 +2636,14 @@
       "company": "현대자동차그룹 (HYUNDAI)",
       "location": "경기 용인시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387476",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%98%84%EB%8C%80%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B7%B8%EB%A3%B9%20%28HYUNDAI%29"
     },
     {
       "id": "7b2fbe2cf919b900",
@@ -2322,12 +2652,14 @@
       "company": "현대자동차그룹 (HYUNDAI)",
       "location": "경기 용인시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387458",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%98%84%EB%8C%80%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B7%B8%EB%A3%B9%20%28HYUNDAI%29"
     },
     {
       "id": "22f2392e91840cb0",
@@ -2336,12 +2668,14 @@
       "company": "스피드플로어",
       "location": "경기 화성시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/389430",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%8A%A4%ED%94%BC%EB%93%9C%ED%94%8C%EB%A1%9C%EC%96%B4"
     },
     {
       "id": "ca002c84e72d3924",
@@ -2350,12 +2684,14 @@
       "company": "맥킨지(McKinsey)",
       "location": "서울 중구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/386740",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A7%A5%ED%82%A8%EC%A7%80%28McKinsey%29"
     },
     {
       "id": "a5462fed67a5e158",
@@ -2364,12 +2700,14 @@
       "company": "에스케이그룹 (SK)",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387315",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%EA%B7%B8%EB%A3%B9%20%28SK%29"
     },
     {
       "id": "8a6dfb18a7f5456d",
@@ -2378,12 +2716,14 @@
       "company": "엔비디아(NVIDIA)",
       "location": "서울 영등포구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/356909",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%94%EB%B9%84%EB%94%94%EC%95%84%28NVIDIA%29"
     },
     {
       "id": "3559e07c9cb8464c",
@@ -2392,12 +2732,14 @@
       "company": "한단제어기술",
       "location": "경기",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/289729",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%EB%8B%A8%EC%A0%9C%EC%96%B4%EA%B8%B0%EC%88%A0"
     },
     {
       "id": "dbcb46736a23fe18",
@@ -2406,12 +2748,14 @@
       "company": "에스케이그룹 (SK)",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387310",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%EA%B7%B8%EB%A3%B9%20%28SK%29"
     },
     {
       "id": "99de70a55602613d",
@@ -2420,12 +2764,14 @@
       "company": "한화그룹 (Hanwha)",
       "location": "서울 중구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387686",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%ED%95%9C%ED%99%94%EA%B7%B8%EB%A3%B9%20%28Hanwha%29"
     },
     {
       "id": "8db5443fb2e81f60",
@@ -2434,12 +2780,14 @@
       "company": "에스케이그룹 (SK)",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387329",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%EA%B7%B8%EB%A3%B9%20%28SK%29"
     },
     {
       "id": "c94e3fdde39a46b5",
@@ -2448,12 +2796,14 @@
       "company": "아마존(Amazon)",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/357552",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EB%A7%88%EC%A1%B4%28Amazon%29"
     },
     {
       "id": "4c6e80a1b344fc21",
@@ -2462,12 +2812,14 @@
       "company": "에스케이그룹 (SK)",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387287",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%EA%B7%B8%EB%A3%B9%20%28SK%29"
     },
     {
       "id": "1132cf3d91848833",
@@ -2476,12 +2828,14 @@
       "company": "컬리",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/386845",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BB%AC%EB%A6%AC"
     },
     {
       "id": "24efd003172dafa5",
@@ -2490,12 +2844,14 @@
       "company": "리필리",
       "location": "서울 금천구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/370873",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EB%A6%AC%ED%95%84%EB%A6%AC"
     },
     {
       "id": "7ccd8856bcfdbc40",
@@ -2504,12 +2860,14 @@
       "company": "컨포트랩",
       "location": "서울 송파구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/386304",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%BB%A8%ED%8F%AC%ED%8A%B8%EB%9E%A9"
     },
     {
       "id": "5933ad9fbb3cf312",
@@ -2518,12 +2876,14 @@
       "company": "아마존(Amazon)",
       "location": "서울 강남구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/360059",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%95%84%EB%A7%88%EC%A1%B4%28Amazon%29"
     },
     {
       "id": "367c11717bc6e141",
@@ -2532,12 +2892,14 @@
       "company": "에스케이그룹 (SK)",
       "location": "경기 여주시",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/389235",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%EA%B7%B8%EB%A3%B9%20%28SK%29"
     },
     {
       "id": "58f09744cd32a301",
@@ -2546,12 +2908,14 @@
       "company": "엠지알브이",
       "location": "서울 성동구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/366106",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%A0%EC%A7%80%EC%95%8C%EB%B8%8C%EC%9D%B4"
     },
     {
       "id": "23844c072246dbcc",
@@ -2560,96 +2924,110 @@
       "company": "에스케이그룹 (SK)",
       "location": "서울 종로구",
       "condition": "정규직",
+      "company_size": null,
       "link": "https://www.wanted.co.kr/wd/387331",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%EC%97%90%EC%8A%A4%EC%BC%80%EC%9D%B4%EA%B7%B8%EB%A3%B9%20%28SK%29"
     },
     {
       "id": "e78b55af3a496bd1",
       "site": "잡코리아",
       "title": "AS 엔지니어 (경력)",
-      "company": "",
-      "location": "",
-      "condition": "스크랩 AS 엔지니어 (경력) ㈜뉴디포 서울 구로구 백화점·유통·도소매, 정비기사, 전기·전자엔지니어 연봉 ~3,600만원 즉시 지원 AD 경력1년↑",
+      "company": "㈜뉴디포",
+      "location": "서울 구로구",
+      "condition": "서울 구로구 · 스크랩 AS 엔지니어 (경력) ㈜뉴디포 서울 구로구 백화점·유통·도소매, 정비기사, 전기·전자엔지니어 연봉 ~3,600만원 즉시 지원 AD 경력1년↑",
+      "company_size": null,
       "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50074577?Oem_Code=C1&logpath=1&stext=%EC%A0%84%EA%B8%B0%EC%A0%84%EC%9E%90&listno=2&sc=808",
       "query": "전기전자",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%E3%88%9C%EB%89%B4%EB%94%94%ED%8F%AC"
     },
     {
       "id": "8a0a8f4aea43911a",
       "site": "잡코리아",
       "title": "AS 엔지니어 (경력)",
-      "company": "",
-      "location": "",
-      "condition": "스크랩 AS 엔지니어 (경력) ㈜뉴디포 서울 구로구 백화점·유통·도소매, 정비기사, 전기·전자엔지니어 연봉 ~3,600만원 즉시 지원 AD 경력1년↑",
+      "company": "㈜뉴디포",
+      "location": "서울 구로구",
+      "condition": "서울 구로구 · 스크랩 AS 엔지니어 (경력) ㈜뉴디포 서울 구로구 백화점·유통·도소매, 정비기사, 전기·전자엔지니어 연봉 ~3,600만원 즉시 지원 AD 경력1년↑",
+      "company_size": null,
       "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50074577?Oem_Code=C1&logpath=1&stext=%ED%9A%8C%EB%A1%9C%EC%84%A4%EA%B3%84&listno=2&sc=808",
       "query": "회로설계",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%E3%88%9C%EB%89%B4%EB%94%94%ED%8F%AC"
     },
     {
       "id": "ef3cdbf99bbda63b",
       "site": "잡코리아",
       "title": "(주)연우뉴매틱 품질 담당자 채용 (경력)",
-      "company": "",
-      "location": "",
-      "condition": "스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 AD 경력3년↑",
+      "company": "㈜연우뉴매틱",
+      "location": "경기 시흥시 외 5",
+      "condition": "경기 시흥시 외 5 · 스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 AD 경력3년↑",
+      "company_size": null,
       "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50046549?Oem_Code=C1&logpath=1&stext=%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC&listno=5&sc=808",
       "query": "생산관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%E3%88%9C%EC%97%B0%EC%9A%B0%EB%89%B4%EB%A7%A4%ED%8B%B1"
     },
     {
       "id": "43a636d3be921caf",
       "site": "잡코리아",
       "title": "(주)연우뉴매틱 품질 담당자 채용 (경력)",
-      "company": "",
-      "location": "",
-      "condition": "스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 AD 경력3년↑",
+      "company": "㈜연우뉴매틱",
+      "location": "경기 시흥시 외 5",
+      "condition": "경기 시흥시 외 5 · 스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 AD 경력3년↑",
+      "company_size": null,
       "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50046549?Oem_Code=C1&logpath=1&stext=%ED%92%88%EC%A7%88%EA%B4%80%EB%A6%AC&listno=5&sc=808",
       "query": "품질관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%E3%88%9C%EC%97%B0%EC%9A%B0%EB%89%B4%EB%A7%A4%ED%8B%B1"
     },
     {
       "id": "be54e315f73e027d",
       "site": "잡코리아",
       "title": "(주)연우뉴매틱 품질 담당자 채용 (경력)",
-      "company": "",
-      "location": "",
-      "condition": "스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 AD 경력3년↑",
+      "company": "㈜연우뉴매틱",
+      "location": "경기 시흥시 외 5",
+      "condition": "경기 시흥시 외 5 · 스크랩 (주)연우뉴매틱 품질 담당자 채용 (경력) ㈜연우뉴매틱 경기 시흥시 외 5 기계·기계설비, 품질관리자 즉시 지원 AD 경력3년↑",
+      "company_size": null,
       "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50046549?Oem_Code=C1&logpath=1&stext=%EC%83%9D%EC%82%B0%EA%B8%B0%EC%88%A0&listno=5&sc=808",
       "query": "생산기술",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%E3%88%9C%EC%97%B0%EC%9A%B0%EB%89%B4%EB%A7%A4%ED%8B%B1"
     },
     {
       "id": "96e4939c03b10f23",
       "site": "잡코리아",
       "title": "AS 엔지니어 (경력)",
-      "company": "",
-      "location": "",
-      "condition": "스크랩 AS 엔지니어 (경력) ㈜뉴디포 서울 구로구 백화점·유통·도소매, 정비기사, 전기·전자엔지니어 연봉 ~3,600만원 즉시 지원 AD 경력1년↑",
+      "company": "㈜뉴디포",
+      "location": "서울 구로구",
+      "condition": "서울 구로구 · 스크랩 AS 엔지니어 (경력) ㈜뉴디포 서울 구로구 백화점·유통·도소매, 정비기사, 전기·전자엔지니어 연봉 ~3,600만원 즉시 지원 AD 경력1년↑",
+      "company_size": null,
       "link": "https://www.jobkorea.co.kr/Recruit/GI_Read/50074577?Oem_Code=C1&logpath=1&stext=%EC%84%A4%EB%B9%84%EA%B4%80%EB%A6%AC&listno=2&sc=808",
       "query": "설비관리",
       "deadline": null,
       "dday": null,
       "is_new": false,
-      "urgent": false
+      "urgent": false,
+      "blind_url": "https://www.teamblind.com/kr/search/%E3%88%9C%EB%89%B4%EB%94%94%ED%8F%AC"
     }
   ]
 }

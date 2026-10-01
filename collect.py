@@ -76,6 +76,35 @@ def is_expired(deadline_str):
     return dd is not None and dd < 0
 
 
+BUSINESS_SIZE_LABELS = {
+    "big_business": "대기업",
+    "middle_market": "중견기업",
+    "small_business": "중소기업",
+    "public": "공기업",
+}
+
+
+def guess_company_size(business_size, popular_category):
+    if business_size in BUSINESS_SIZE_LABELS:
+        return BUSINESS_SIZE_LABELS[business_size]
+    text = popular_category or ""
+    if "공기업" in text or "공공" in text:
+        return "공기업"
+    if "대기업" in text or "1조" in text:
+        return "대기업"
+    if "중견" in text:
+        return "중견기업"
+    if "강소" in text:
+        return "강소기업"
+    if "중소" in text:
+        return "중소기업"
+    return None
+
+
+def blind_search_url(company):
+    return "https://www.teamblind.com/kr/search/" + urllib.parse.quote(company)
+
+
 # ---------------- 사람인 ----------------
 def fetch_saramin(query):
     results = []
@@ -118,6 +147,7 @@ def fetch_saramin(query):
             "company": company,
             "location": cond_text.split(" ")[0] if cond_text else "",
             "condition": cond_text,
+            "company_size": None,
             "link": link,
             "query": query,
             "deadline": deadline,
@@ -156,8 +186,16 @@ def fetch_jobkorea(query):
         if is_excluded_employment(full_text):
             continue
 
-        company_el = card.select_one("a[href*='/Company/']")
+        company_el = card.select_one("span.text-gray700.text-typo-b2-16") or card.select_one("a[href*='/Company/']")
         company = company_el.get_text(strip=True) if company_el else ""
+
+        location = ""
+        loc_icon = card.select_one('span[class*="basicemoji-place"]')
+        if loc_icon:
+            chip = loc_icon.find_parent(attrs={"data-sentry-component": "GrayChip"})
+            if chip:
+                loc_span = chip.select_one("span.truncate.text-gray900") or chip.select_one("span.truncate")
+                location = loc_span.get_text(strip=True) if loc_span else ""
 
         # 잡코리아 검색 결과 카드에는 마감일이 표시되지 않아 deadline은 항상 미확인(None)
         results.append({
@@ -165,8 +203,9 @@ def fetch_jobkorea(query):
             "site": "잡코리아",
             "title": title,
             "company": company,
-            "location": "",
-            "condition": full_text[:120],
+            "location": location,
+            "condition": (location + " · " if location else "") + full_text[:100],
+            "company_size": None,
             "link": link,
             "query": query,
             "deadline": None,
@@ -227,6 +266,7 @@ def fetch_wanted(query):
             "company": company,
             "location": location_text,
             "condition": "정규직",
+            "company_size": None,
             "link": link,
             "query": query,
             "deadline": deadline,
@@ -273,6 +313,7 @@ def fetch_catch(query):
 
         rid = item.get("RecruitID")
         link = f"https://www.catch.co.kr/NCS/RecruitDetail?RecruitID={rid}"
+        company_size = guess_company_size(item.get("business_size"), item.get("PopularCategory"))
         results.append({
             "id": job_id("catch", str(rid)),
             "site": "캐치",
@@ -280,6 +321,7 @@ def fetch_catch(query):
             "company": item.get("CompName", ""),
             "location": work_area,
             "condition": f"{gubun} · {item.get('ExperienceText', '')}",
+            "company_size": company_size,
             "link": link,
             "query": query,
             "deadline": deadline,
@@ -323,6 +365,7 @@ def main():
     for j in jobs_list:
         j["is_new"] = j["id"] not in seen_ids
         j["urgent"] = j["dday"] is not None and 0 <= j["dday"] <= 3
+        j["blind_url"] = blind_search_url(j["company"]) if j.get("company") else None
 
     PREV_IDS_FILE.parent.mkdir(exist_ok=True)
     PREV_IDS_FILE.write_text(
