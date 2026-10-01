@@ -254,8 +254,7 @@
 
 <div class="wrap">
   <div class="hero">
-    <h1><span class="name">건우</span>, 오늘도 좋은 자리 하나 찾아보자</h1>
-    <p class="pep" id="pepLine">전기전자 제어 · 회로설계 2~3년 · 생산관리 1년 3개월 — 서울·경기, 정규직만 매일 걸러서 모아둘게.</p>
+    <h1><span class="name">누누</span>야 힘내, 제발 나를 위해서 최선을 다해줘..</h1>
   </div>
 
   <header class="controls-bar">
@@ -320,20 +319,6 @@
 <script>
 (function () {
   var state = { jobs: [], site: "전체", newOnly: false, urgentOnly: false, q: "" };
-
-  var PEP_LINES = [
-    "오늘 지원 하나 넣으면, 내일은 한 걸음 더 가까워져 있을 거야.",
-    "급할수록 천천히 — 조건 맞는 곳부터 하나씩 체크해보자.",
-    "마감임박 공고부터 먼저 훑어보는 게 오늘의 할 일.",
-    "경력 2~3년이면 생각보다 문 두드릴 곳 많아. 하나씩 가보자.",
-    "오늘 못 찾아도 괜찮아, 매일 아침 새로 채워질 거야."
-  ];
-
-  function dayIndex() {
-    var d = new Date();
-    var start = new Date(d.getFullYear(), 0, 0);
-    return Math.floor((d - start) / 86400000);
-  }
 
   function jobMatchesFilters(j, overrides) {
     overrides = overrides || {};
@@ -468,7 +453,6 @@
     document.getElementById("statTotal").textContent = data.total != null ? data.total : state.jobs.length;
     document.getElementById("statNew").textContent = data.new_count != null ? data.new_count : 0;
     document.getElementById("statUrgent").textContent = data.urgent_count != null ? data.urgent_count : 0;
-    document.getElementById("pepLine").textContent += "  " + PEP_LINES[dayIndex() % PEP_LINES.length];
 
     var sites = Array.from(new Set(state.jobs.map(function (j) { return j.site; })));
     document.getElementById("statSites").textContent = sites.length || 4;
