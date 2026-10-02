@@ -58,15 +58,22 @@ async function callAnthropic(env, payload, mode) {
   });
 }
 
-// apikey 헤더가 막히면 bearer로 한 번 더 시도 (이 계정에서 관찰된 증상에 대한 방어 코드)
-async function callAnthropicWithFallback(env, payload) {
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// 이 계정은 요청의 일부가 무작위로 403(forbidden)을 반환하는 현상이 관찰돼서
+// apikey/bearer 두 방식을 번갈아가며 여러 번 재시도한다 (한 번이라도 뚫리면 통과).
+async function callAnthropicWithFallback(env, payload, maxRounds = 4) {
   const attempts = [];
-  let res = await callAnthropic(env, payload, "apikey");
-  attempts.push(`apikey=${res.status}`);
-  if (!res.ok) {
-    const second = await callAnthropic(env, payload, "bearer");
-    attempts.push(`bearer=${second.status}`);
-    res = second;
+  let res = null;
+  for (let round = 0; round < maxRounds; round++) {
+    for (const mode of ["apikey", "bearer"]) {
+      res = await callAnthropic(env, payload, mode);
+      attempts.push(`${mode}#${round}=${res.status}`);
+      if (res.ok) return { res, attempts };
+    }
+    if (round < maxRounds - 1) await sleep(250);
   }
   return { res, attempts };
 }
