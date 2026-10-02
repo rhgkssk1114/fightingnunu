@@ -79,6 +79,8 @@
   .hero h1 .name { color: var(--accent); }
   .hero .pep { font-size: 13.5px; color: var(--text-muted); margin: 0; line-height: 1.6; }
 
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+
   .letter-btn {
     display: inline-flex;
     align-items: center;
@@ -316,15 +318,62 @@
     background: var(--accent); color: #fff; border: none;
     border-radius: 10px; padding: 0 16px; cursor: pointer;
   }
+
+  /* ---- 자소서 도우미 패널 ---- */
+  #docGenPanel {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 35;
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  #docGenPanel[hidden] { display: none; }
+  #docGenBody { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+  .dg-field { display: flex; flex-direction: column; gap: 6px; }
+  .dg-field label { font-size: 12.5px; color: var(--text-muted); font-weight: 600; }
+  .dg-field select, .dg-field input, .dg-field textarea {
+    font-family: var(--sans); font-size: 14px;
+    padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); resize: vertical;
+  }
+  .dg-field textarea { line-height: 1.6; }
+  .dg-submit {
+    font-size: 14px; font-weight: 600;
+    background: var(--accent); color: #fff; border: none;
+    border-radius: 10px; padding: 12px; cursor: pointer;
+  }
+  .dg-submit:disabled { opacity: 0.6; cursor: default; }
+  #dgResult { border-top: 1px solid var(--border); padding-top: 14px; }
+  .dg-result-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .dg-result-head span { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+  .dg-result-head button {
+    font-size: 12px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--text-muted); border-radius: 999px; padding: 5px 11px; cursor: pointer;
+  }
+  #dgResultText {
+    white-space: pre-wrap; word-break: break-word;
+    font-family: var(--sans); font-size: 13.5px; line-height: 1.75;
+    background: var(--surface-sunken); border-radius: 10px; padding: 14px; margin: 0;
+  }
+  .dg-error { font-size: 13px; color: var(--urgent); background: var(--urgent-wash); border-radius: 10px; padding: 10px 12px; }
 </style>
 
 <div class="wrap">
   <div class="hero">
     <h1><span class="name">누누</span>야 힘내, 제발 나를 위해서 최선을 다해줘..</h1>
-    <button id="letterBtn" class="letter-btn" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      너에게 온 편지
-    </button>
+    <div class="hero-btns">
+      <button id="letterBtn" class="letter-btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        너에게 온 편지
+      </button>
+      <button id="docGenBtn" class="letter-btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+        자소서·이력서 초안 만들기
+      </button>
+    </div>
   </div>
 
   <header class="controls-bar">
@@ -374,6 +423,49 @@
       <p>눌러서 편지를 열어보세요</p>
     </div>
     <div id="letterBody" hidden></div>
+  </div>
+</div>
+
+<div id="docGenPanel" hidden>
+  <div class="chat-head">
+    <div>
+      <h2>자소서·이력서 초안</h2>
+      <div class="sub">경험을 STAR로 입력하면 초안을 만들어줘요</div>
+    </div>
+    <button id="docGenClose" aria-label="닫기">✕</button>
+  </div>
+  <div id="docGenBody">
+    <div class="dg-field">
+      <label for="dgType">문서 종류</label>
+      <select id="dgType">
+        <option value="cover_letter">자기소개서</option>
+        <option value="resume">이력서</option>
+        <option value="portfolio">포트폴리오</option>
+        <option value="interview">예상 면접 질문·답변</option>
+      </select>
+    </div>
+    <div class="dg-field">
+      <label for="dgTarget">지원 직무 / 회사 (선택)</label>
+      <input id="dgTarget" type="text" placeholder="예: OO전자 생산관리 직무, 또는 공고 리스트의 제목 복붙">
+    </div>
+    <div class="dg-field">
+      <label for="dgExperience">경험 데이터 (STAR로 적어주세요)</label>
+      <textarea id="dgExperience" rows="9" placeholder="예시)
+S(상황): 생산라인 품질관리 담당, 불량률 변동 심함
+T(과제): 불량 재발 방지 원인 분석
+A(행동): 공정별 불량 데이터 집계, 설비 온도 편차가 원인임을 발견해 점검 주기 단축 제안
+R(결과): 불량률 15% → 6%
+보유 기술: PLC 기초, QC 7가지 도구, 전기기사"></textarea>
+    </div>
+    <button id="dgSubmit" class="dg-submit" type="button">초안 만들기</button>
+    <div id="dgResult" hidden>
+      <div class="dg-result-head">
+        <span>초안</span>
+        <button id="dgCopy" type="button">복사하기</button>
+      </div>
+      <pre id="dgResultText"></pre>
+    </div>
+    <div id="dgError" class="dg-error" hidden></div>
   </div>
 </div>
 
@@ -608,6 +700,78 @@
   }
 
   initLetter();
+
+  // ---------------- 자소서 기반 서류 초안 생성 ----------------
+  var GENERATE_API = "https://job-radar-chat.rhgkssk1114.workers.dev/generate";
+
+  function initDocGen() {
+    var openBtn = document.getElementById("docGenBtn");
+    var panel = document.getElementById("docGenPanel");
+    var closeBtn = document.getElementById("docGenClose");
+    var submitBtn = document.getElementById("dgSubmit");
+    var expInput = document.getElementById("dgExperience");
+    var targetInput = document.getElementById("dgTarget");
+    var typeSelect = document.getElementById("dgType");
+    var resultBox = document.getElementById("dgResult");
+    var resultText = document.getElementById("dgResultText");
+    var copyBtn = document.getElementById("dgCopy");
+    var errorBox = document.getElementById("dgError");
+
+    openBtn.addEventListener("click", function () { panel.hidden = false; });
+    closeBtn.addEventListener("click", function () { panel.hidden = true; });
+
+    submitBtn.addEventListener("click", function () {
+      var experience = expInput.value.trim();
+      errorBox.hidden = true;
+      if (!experience) {
+        errorBox.textContent = "경험 데이터를 STAR 형식으로 먼저 입력해주세요.";
+        errorBox.hidden = false;
+        return;
+      }
+      submitBtn.disabled = true;
+      submitBtn.textContent = "작성 중… (몇십 초 걸려요)";
+      resultBox.hidden = true;
+
+      fetch(GENERATE_API, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          docType: typeSelect.value,
+          experience: experience,
+          targetInfo: targetInput.value.trim(),
+        }),
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.result) {
+            resultText.textContent = data.result;
+            resultBox.hidden = false;
+          } else {
+            errorBox.textContent = "초안 생성에 실패했어요. 잠시 후 다시 시도해주세요. (" + (data && data.error || "unknown") + ")";
+            errorBox.hidden = false;
+          }
+        })
+        .catch(function (err) {
+          errorBox.textContent = "연결에 실패했어요. 네트워크 확인하고 다시 시도해주세요.";
+          errorBox.hidden = false;
+          console.error(err);
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "초안 만들기";
+        });
+    });
+
+    copyBtn.addEventListener("click", function () {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(resultText.textContent).then(function () {
+        copyBtn.textContent = "복사됨!";
+        setTimeout(function () { copyBtn.textContent = "복사하기"; }, 1500);
+      });
+    });
+  }
+
+  initDocGen();
 
   // ---------------- 공고 도우미 (Claude API 연동, 실패 시 규칙 기반 폴백) ----------------
   var CHAT_API = "https://job-radar-chat.rhgkssk1114.workers.dev/chat";

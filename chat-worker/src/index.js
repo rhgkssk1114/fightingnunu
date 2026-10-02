@@ -58,6 +58,19 @@ async function callAnthropic(env, payload, mode) {
   });
 }
 
+// apikey 헤더가 막히면 bearer로 한 번 더 시도 (이 계정에서 관찰된 증상에 대한 방어 코드)
+async function callAnthropicWithFallback(env, payload) {
+  const attempts = [];
+  let res = await callAnthropic(env, payload, "apikey");
+  attempts.push(`apikey=${res.status}`);
+  if (!res.ok) {
+    const second = await callAnthropic(env, payload, "bearer");
+    attempts.push(`bearer=${second.status}`);
+    res = second;
+  }
+  return { res, attempts };
+}
+
 async function handleChat(request, env) {
   let body;
   try {
@@ -86,14 +99,7 @@ async function handleChat(request, env) {
     messages,
   };
 
-  const attempts = [];
-  let anthropicRes = await callAnthropic(env, payload, "apikey");
-  attempts.push(`apikey=${anthropicRes.status}`);
-  if (!anthropicRes.ok) {
-    const second = await callAnthropic(env, payload, "bearer");
-    attempts.push(`bearer=${second.status}`);
-    anthropicRes = second;
-  }
+  const { res: anthropicRes, attempts } = await callAnthropicWithFallback(env, payload);
 
   if (!anthropicRes.ok) {
     const errText = await anthropicRes.text();
@@ -110,6 +116,114 @@ async function handleChat(request, env) {
     .trim();
 
   return new Response(JSON.stringify({ reply: text || "음, 지금은 답을 못 찾았어요. 다시 물어봐줄래요?" }), {
+    headers: { "content-type": "application/json" },
+  });
+}
+
+// ---------------- 자소서 기반 이력서/포트폴리오/자기소개서/면접 준비 생성 ----------------
+
+const DOC_TYPE_LABELS = {
+  cover_letter: "자기소개서",
+  resume: "이력서",
+  portfolio: "포트폴리오",
+  interview: "예상 면접 질문·답변",
+};
+
+const CORE_WRITING_RULES = [
+  "모든 경험 서술은 STAR(Situation-Task-Action-Result) 구조로 재구성한다. 상황/과제를 한두 문장으로 압축하고, 행동과 결과에 가장 많은 분량을 쓴다.",
+  "'열심히', '최선을 다해', '함께 성장', '열정적으로', '책임감을 가지고', '소통을 중요시' 같은 상투적 표현은 절대 쓰지 않는다. 그 자리에는 구체적인 행동과 수치를 쓴다.",
+  "입력된 경험 데이터에 없는 수치나 성과를 지어내지 않는다. 사용자가 수치를 안 줬으면 '[구체적 수치 입력]'처럼 괄호로 빈칸을 남겨서 본인이 채우게 한다.",
+  "문단은 두괄식으로 쓴다 — 핵심 역량이나 결론을 첫 문장에 제시하고, 그다음에 근거(STAR)를 댄다.",
+  "AI가 쓴 것처럼 매끄럽고 평면적인 문장을 피한다. 문장 길이에 변화를 주고, 담백하게 끊어 쓰고, 과한 수식어나 비유를 쓰지 않는다. '또한', '그리고', '뿐만 아니라' 같은 접속사를 문단마다 반복하지 않는다.",
+  "입력된 기술 스택과 자격증은 각 경험에 자연스럽게 녹여서 언급한다 (나열하지 말고, 그 기술을 '어떻게' 써서 '무엇을' 해냈는지로 풀어낸다).",
+  "지원 직무가 지금까지의 경력과 다른 분야라면, 억지로 끼워 맞추지 말고 실제로 전이 가능한 기술적 역량(예: 회로설계 경험 → 전기 시스템 이해, 생산관리 경험 → 공정 데이터 기반 문제해결, 품질관리 경험 → 원인분석/트러블슈팅)을 구체적으로 짚어서 자연스럽게 연결한다.",
+  "마지막 문단에는 입사 후 이 역량으로 구체적으로 어떻게 기여할지를 한 문단으로 명확히 제시한다.",
+].join("\n- ");
+
+function buildGenerateSystemPrompt(docType, targetInfo) {
+  const label = DOC_TYPE_LABELS[docType] || "자기소개서";
+  const header = [
+    `당신은 건우의 ${label} 작성을 돕는 전문 커리어 라이터예요.`,
+    "건우는 전기전자 제어 / 회로설계 2~3년 + 생산관리 1년 3개월 경력이고, 서울·경기 지역 정규직을 찾고 있어요.",
+    targetInfo ? `지원 대상 공고/직무 정보:\n${targetInfo}` : "지원 대상 공고 정보는 따로 주어지지 않았어요 — 사용자가 준 경험 데이터 안의 기술/직무 키워드를 기준으로 일반적인 지원 직무를 유추해서 쓰세요.",
+    "",
+    "작성 기준 (전부 반드시 지킬 것):",
+    "- " + CORE_WRITING_RULES,
+  ];
+
+  const typeSpecific = {
+    cover_letter: [
+      "",
+      "출력 형식: 자기소개서 항목 초안.",
+      "- 입력된 경험 데이터를 바탕으로 1~3개 항목(지원동기/직무역량/입사 후 포부 등)으로 나눠서 각 항목을 두괄식 문단으로 작성한다.",
+      "- 항목당 400~700자 내외. 분량을 억지로 늘리지 않는다.",
+      "- 마지막 항목은 반드시 '직무 기여 방안'으로 마무리한다.",
+    ],
+    resume: [
+      "",
+      "출력 형식: 이력서.",
+      "- 기본정보 / 핵심 역량 요약(3줄) / 경력(STAR 기반, 회사·기간·역할·성과 bullet) / 기술 스택 / 자격증·어학 / 학력 순서의 마크다운 구조로 작성한다.",
+      "- 경력 bullet은 '행동 동사로 시작 + 구체적 수치/기술'로 한 줄씩, 가독성 있게 짧게 끊어 쓴다.",
+      "- 과장하지 않고 입력된 사실 기반으로만 작성한다.",
+    ],
+    portfolio: [
+      "",
+      "출력 형식: 포트폴리오.",
+      "- 프로젝트 단위로 구성: [프로젝트명 / 기간 / 역할] → Situation·Task(1~2줄) → Action(사용 기술을 구체적으로 명시) → Result(정량 성과, 없으면 빈칸 표시).",
+      "- 프로젝트마다 '사용 기술' 줄을 따로 빼서 스캔하기 쉽게 한다.",
+      "- 프로젝트가 여러 개면 지원 직무와 관련성이 높은 순서로 배치한다.",
+    ],
+    interview: [
+      "",
+      "출력 형식: 예상 면접 질문 + 모범답변 초안.",
+      "- 입력된 경험과 지원 직무를 바탕으로 예상 질문 8개를 뽑는다 (직무역량 3~4개, 경험 검증형 3~4개, 전환 커리어 관련 1~2개).",
+      "- 각 질문마다 STAR 기반 모범답변 초안(3~5문장)과, 면접관이 할 법한 꼬리질문 1개를 같이 적는다.",
+    ],
+  };
+
+  return header.concat(typeSpecific[docType] || typeSpecific.cover_letter).join("\n");
+}
+
+async function handleGenerate(request, env) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return new Response(JSON.stringify({ error: "invalid_json" }), { status: 400 });
+  }
+
+  const docType = DOC_TYPE_LABELS[body.docType] ? body.docType : "cover_letter";
+  const experience = (body.experience || "").toString().slice(0, 6000);
+  const targetInfo = (body.targetInfo || "").toString().slice(0, 1000);
+
+  if (!experience.trim()) {
+    return new Response(JSON.stringify({ error: "empty_experience" }), { status: 400 });
+  }
+
+  const payload = {
+    model: "claude-opus-5",
+    max_tokens: 3000,
+    system: buildGenerateSystemPrompt(docType, targetInfo),
+    messages: [{ role: "user", content: `경험 데이터:\n${experience}` }],
+  };
+
+  const { res: anthropicRes, attempts } = await callAnthropicWithFallback(env, payload);
+
+  if (!anthropicRes.ok) {
+    const errText = await anthropicRes.text();
+    return new Response(JSON.stringify({ error: "upstream_error", attempts, detail: errText.slice(0, 500) }), {
+      status: 502,
+    });
+  }
+
+  const data = await anthropicRes.json();
+  const text = (data.content || [])
+    .filter((b) => b.type === "text")
+    .map((b) => b.text)
+    .join("\n")
+    .trim();
+
+  return new Response(JSON.stringify({ result: text, docType }), {
     headers: { "content-type": "application/json" },
   });
 }
@@ -239,12 +353,15 @@ export default {
     if (request.method === "OPTIONS") {
       return new Response(null, { headers });
     }
-    if (request.method !== "POST" || url.pathname !== "/chat") {
+
+    const routes = { "/chat": handleChat, "/generate": handleGenerate };
+    const handler = request.method === "POST" ? routes[url.pathname] : null;
+    if (!handler) {
       return new Response(JSON.stringify({ error: "not_found" }), { status: 404, headers });
     }
 
     try {
-      const res = await handleChat(request, env);
+      const res = await handler(request, env);
       const merged = new Headers(res.headers);
       Object.entries(headers).forEach(([k, v]) => merged.set(k, v));
       return new Response(res.body, { status: res.status, headers: merged });
