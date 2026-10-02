@@ -4,3 +4,7 @@ compatibility_date = "2026-01-01"
 
 [observability]
 enabled = true
+
+[triggers]
+# 매일 23:15 UTC = 08:15 KST (GitHub 배치가 끝난 뒤 여유를 두고 발송)
+crons = ["15 23 * * *"]

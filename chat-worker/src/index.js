@@ -1,6 +1,9 @@
 const ALLOWED_ORIGIN = "https://rhgkssk1114.github.io";
 const MODEL = "claude-haiku-4-5";
 const MAX_JOBS_IN_CONTEXT = 80;
+const JOBS_URL = "https://rhgkssk1114.github.io/fightingnunu/jobs.json";
+const SITE_URL = "https://rhgkssk1114.github.io/fightingnunu/";
+const KAKAO_REDIRECT_URI = "https://job-radar-chat.rhgkssk1114.workers.dev/kakao/callback";
 
 function corsHeaders(origin) {
   const allow = origin === ALLOWED_ORIGIN ? origin : ALLOWED_ORIGIN;
@@ -89,11 +92,7 @@ async function handleChat(request, env) {
   if (!anthropicRes.ok) {
     const second = await callAnthropic(env, payload, "bearer");
     attempts.push(`bearer=${second.status}`);
-    if (second.ok) {
-      anthropicRes = second;
-    } else {
-      anthropicRes = second;
-    }
+    anthropicRes = second;
   }
 
   if (!anthropicRes.ok) {
@@ -115,16 +114,132 @@ async function handleChat(request, env) {
   });
 }
 
+// ---------------- 카카오톡 "나에게 보내기" ----------------
+
+async function kakaoTokenRequest(env, params) {
+  const res = await fetch("https://kauth.kakao.com/oauth/token", {
+    method: "POST",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(params).toString(),
+  });
+  const data = await res.json();
+  return { ok: res.ok, data };
+}
+
+async function handleKakaoCallback(request, env) {
+  const url = new URL(request.url);
+  const code = url.searchParams.get("code");
+  const err = url.searchParams.get("error");
+  if (err) {
+    return new Response(`카카오 로그인 거부/오류: ${err}`, { status: 400 });
+  }
+  if (!code) {
+    return new Response("code 파라미터가 없어요.", { status: 400 });
+  }
+
+  const { ok, data } = await kakaoTokenRequest(env, {
+    grant_type: "authorization_code",
+    client_id: env.KAKAO_REST_API_KEY,
+    redirect_uri: KAKAO_REDIRECT_URI,
+    code,
+  });
+
+  if (!ok || !data.refresh_token) {
+    return new Response("토큰 교환 실패: " + JSON.stringify(data), { status: 502 });
+  }
+
+  const body = [
+    "카카오 연동 성공! 아래 refresh_token을 복사해서",
+    "터미널에서 이 명령으로 등록해주세요:",
+    "",
+    "  npx wrangler secret put KAKAO_REFRESH_TOKEN",
+    "",
+    "refresh_token (이 값을 복사):",
+    data.refresh_token,
+    "",
+    "등록 후 이 페이지는 다시 안 쓰셔도 돼요.",
+  ].join("\n");
+
+  return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8" } });
+}
+
+async function refreshKakaoAccessToken(env) {
+  const { ok, data } = await kakaoTokenRequest(env, {
+    grant_type: "refresh_token",
+    client_id: env.KAKAO_REST_API_KEY,
+    refresh_token: env.KAKAO_REFRESH_TOKEN,
+  });
+  if (!ok || !data.access_token) {
+    throw new Error("카카오 액세스 토큰 갱신 실패: " + JSON.stringify(data));
+  }
+  return data.access_token;
+}
+
+async function buildDailySummaryText() {
+  const res = await fetch(JOBS_URL, { cf: { cacheTtl: 0 } });
+  const data = await res.json();
+  const jobs = data.jobs || [];
+  const urgent = jobs.filter((j) => j.urgent).slice(0, 3);
+
+  let text = `[공고 레이더] ${data.updated_at_display || ""}\n`;
+  text += `전체 ${data.total}건 · 신규 ${data.new_count}건 · 마감임박 ${data.urgent_count}건`;
+  if (urgent.length) {
+    text += "\n\n마감임박 공고:\n" + urgent.map((j) => `· ${j.title} (D-${j.dday})`).join("\n");
+  }
+  return text;
+}
+
+async function sendKakaoMemo(accessToken, text) {
+  const templateObject = {
+    object_type: "text",
+    text,
+    link: { web_url: SITE_URL, mobile_web_url: SITE_URL },
+    button_title: "공고 보기",
+  };
+  return fetch("https://kapi.kakao.com/v2/api/talk/memo/default/send", {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${accessToken}`,
+      "content-type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({ template_object: JSON.stringify(templateObject) }).toString(),
+  });
+}
+
+async function runKakaoNotification(env) {
+  const accessToken = await refreshKakaoAccessToken(env);
+  const text = await buildDailySummaryText();
+  const res = await sendKakaoMemo(accessToken, text);
+  const resultText = await res.text();
+  return { ok: res.ok, status: res.status, body: resultText, sentText: text };
+}
+
 export default {
   async fetch(request, env) {
+    const url = new URL(request.url);
     const origin = request.headers.get("Origin") || "";
-    const headers = corsHeaders(origin);
 
+    if (url.pathname === "/kakao/callback" && request.method === "GET") {
+      return handleKakaoCallback(request, env);
+    }
+
+    if (url.pathname === "/kakao/test" && request.method === "GET") {
+      try {
+        const result = await runKakaoNotification(env);
+        return new Response(JSON.stringify(result, null, 2), {
+          status: result.ok ? 200 : 502,
+          headers: { "content-type": "application/json" },
+        });
+      } catch (e) {
+        return new Response(JSON.stringify({ error: String(e) }), { status: 500 });
+      }
+    }
+
+    const headers = corsHeaders(origin);
     if (request.method === "OPTIONS") {
       return new Response(null, { headers });
     }
-
-    if (request.method !== "POST" || new URL(request.url).pathname !== "/chat") {
+    if (request.method !== "POST" || url.pathname !== "/chat") {
       return new Response(JSON.stringify({ error: "not_found" }), { status: 404, headers });
     }
 
@@ -139,5 +254,9 @@ export default {
         headers,
       });
     }
+  },
+
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(runKakaoNotification(env));
   },
 };
