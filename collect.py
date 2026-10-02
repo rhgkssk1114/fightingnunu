@@ -32,6 +32,9 @@ EXCLUDE_EMPLOYMENT = ["계약직", "인턴", "파견", "도급", "아웃소싱",
 KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).date()
 
+# 이전 실행 결과(jobs.json)를 캐시로 써서, 이미 본 공고는 상세페이지를 다시 안 긁는다
+PREV_JOBS = {}
+
 
 def job_id(*parts):
     return hashlib.md5("|".join(parts).encode("utf-8")).hexdigest()[:16]
@@ -129,6 +132,76 @@ SARAMIN_SIZE_CACHE = {}
 WANTED_SIZE_CACHE = {}
 
 
+def summarize_qualification(text):
+    """자격요건/우대사항 텍스트에서 전공·어학 조건만 짧게 뽑아낸다."""
+    if not text:
+        return None
+    parts = []
+    m = re.search(r"[가-힣A-Za-z/,·\s]{0,18}(?:전공|학과)(?:\s*무관)?", text)
+    if m and ("전공" in m.group(0) or "학과" in m.group(0)):
+        parts.append("전공 " + re.sub(r"\s+", " ", m.group(0)).strip(" ·,"))
+    m2 = re.search(
+        r"(?:토익|TOEIC|오픽|OPIc|OPIC|텝스|TEPS)\s*[0-9A-Za-z]*"
+        r"|비즈니스\s*영어[가-힣\s()]{0,10}"
+        r"|영어\s*(?:가능|회화|능통|필수)[가-힣\s()]{0,6}"
+        r"|일본어\s*(?:가능|회화|능통|필수)[가-힣\s()]{0,6}"
+        r"|중국어\s*(?:가능|회화|능통|필수)[가-힣\s()]{0,6}",
+        text,
+    )
+    if m2:
+        parts.append("어학 " + re.sub(r"\s+", " ", m2.group(0)).strip())
+    return " · ".join(parts) if parts else None
+
+
+def fetch_saramin_detail(rec_idx):
+    """자격요건/우대사항 텍스트와 상세 근무지 주소를 가져온다 (실패 시 둘 다 None)."""
+    try:
+        r = requests.get(
+            "https://www.saramin.co.kr/zf_user/jobs/relay/view-detail",
+            params={"rec_idx": rec_idx, "rec_seq": 0}, headers=HEADERS, timeout=10,
+        )
+        soup = BeautifulSoup(r.text, "lxml")
+        qual_text, precise_location = "", None
+        for block in soup.select(".info-block"):
+            title_el = block.select_one(".info-block__title")
+            title = title_el.get_text(strip=True) if title_el else ""
+            list_el = block.select_one(".info-block__list")
+            if not list_el:
+                continue
+            if "자격요건" in title:
+                qual_text = list_el.get_text(" ", strip=True)
+            elif "근무조건" in title:
+                block_text = list_el.get_text(" ", strip=True)
+                m = re.search(r"근무지\s*:\s*([^•]+)", block_text)
+                if m:
+                    precise_location = m.group(1).strip()
+        return qual_text, precise_location
+    except Exception:
+        return "", None
+
+
+def fetch_jobkorea_detail(link):
+    """지원자격 텍스트와 상세 근무지 주소를 가져온다 (실패 시 둘 다 None)."""
+    try:
+        r = requests.get(link, headers=HEADERS, timeout=10)
+        soup = BeautifulSoup(r.text, "lxml")
+        qual_text = ""
+        label = soup.find(string="지원자격")
+        if label:
+            list_el = label.parent.find_next_sibling()
+            if list_el:
+                qual_text = list_el.get_text(" ", strip=True)
+
+        precise_location = None
+        full_text = soup.get_text(" ", strip=True)
+        m = re.search(r"근무지주소\s*([가-힣0-9()~,.\-A-Za-z\s]{5,60}?)(?:지도보기|인근|$)", full_text)
+        if m:
+            precise_location = m.group(1).strip()
+        return qual_text, precise_location
+    except Exception:
+        return "", None
+
+
 def fetch_saramin_company_size(csn):
     if not csn:
         return None
@@ -216,14 +289,30 @@ def fetch_saramin(query):
         csn_match = re.search(r"csn=([^&\"]+)", corp.get("href", ""))
         company_size = fetch_saramin_company_size(csn_match.group(1)) if csn_match else None
 
+        jid = job_id("saramin", link)
+        cached = PREV_JOBS.get(jid)
+        if cached and "qualification_summary" in cached:
+            qualification_summary = cached["qualification_summary"]
+            precise_location = cached.get("precise_location")
+        else:
+            rec_idx_match = re.search(r"rec_idx=(\d+)", href)
+            qual_text, precise_location = (
+                fetch_saramin_detail(rec_idx_match.group(1)) if rec_idx_match else ("", None)
+            )
+            qualification_summary = summarize_qualification(qual_text)
+        if precise_location:
+            location = precise_location
+
         results.append({
-            "id": job_id("saramin", link),
+            "id": jid,
             "site": "사람인",
             "title": title,
             "company": company,
             "location": location,
             "condition": cond_text,
             "company_size": company_size,
+            "qualification_summary": qualification_summary,
+            "precise_location": precise_location,
             "link": link,
             "query": query,
             "deadline": deadline,
@@ -273,15 +362,28 @@ def fetch_jobkorea(query):
                 loc_span = chip.select_one("span.truncate.text-gray900") or chip.select_one("span.truncate")
                 location = loc_span.get_text(strip=True) if loc_span else ""
 
+        jid = job_id("jobkorea", link)
+        cached = PREV_JOBS.get(jid)
+        if cached and "qualification_summary" in cached:
+            qualification_summary = cached["qualification_summary"]
+            precise_location = cached.get("precise_location")
+        else:
+            qual_text, precise_location = fetch_jobkorea_detail(link)
+            qualification_summary = summarize_qualification(qual_text)
+        if precise_location:
+            location = precise_location
+
         # 잡코리아 검색 결과 카드에는 마감일이 표시되지 않아 deadline은 항상 미확인(None)
         results.append({
-            "id": job_id("jobkorea", link),
+            "id": jid,
             "site": "잡코리아",
             "title": title,
             "company": company,
             "location": location,
             "condition": (location + " · " if location else "") + full_text[:100],
             "company_size": None,
+            "qualification_summary": qualification_summary,
+            "precise_location": precise_location,
             "link": link,
             "query": query,
             "deadline": None,
@@ -315,8 +417,10 @@ def fetch_wanted(query):
         link = f"https://www.wanted.co.kr/wd/{wid}"
 
         location_text = ""
+        precise_location = None
         deadline = None
         company_size = None
+        qualification_summary = None
         try:
             d = requests.get(f"https://www.wanted.co.kr/api/chaos/jobs/v4/{wid}/details",
                               headers=HEADERS, timeout=10).json()
@@ -325,11 +429,15 @@ def fetch_wanted(query):
             location_text = " ".join(filter(None, [addr.get("location"), addr.get("district")]))
             if not location_text:
                 location_text = json.dumps(addr, ensure_ascii=False)
+            precise_location = (addr.get("full_location") or "").strip() or None
             due_time = job.get("due_time")
             if due_time:
                 deadline = due_time[:10]
             company_id = job.get("company", {}).get("id")
             company_size = fetch_wanted_company_size(company_id)
+            detail = job.get("detail", {}) or {}
+            qual_text = " ".join(filter(None, [detail.get("requirements"), detail.get("preferred_points")]))
+            qualification_summary = summarize_qualification(qual_text)
         except Exception:
             pass
 
@@ -343,9 +451,11 @@ def fetch_wanted(query):
             "site": "원티드",
             "title": title,
             "company": company,
-            "location": location_text,
+            "location": precise_location or location_text,
             "condition": "정규직",
             "company_size": company_size,
+            "qualification_summary": qualification_summary,
+            "precise_location": precise_location,
             "link": link,
             "query": query,
             "deadline": deadline,
@@ -401,6 +511,8 @@ def fetch_catch(query):
             "location": work_area,
             "condition": f"{gubun} · {item.get('ExperienceText', '')}",
             "company_size": company_size,
+            "qualification_summary": None,
+            "precise_location": None,
             "link": link,
             "query": query,
             "deadline": deadline,
@@ -410,6 +522,14 @@ def fetch_catch(query):
 
 
 def main():
+    global PREV_JOBS
+    if JOBS_FILE.exists():
+        try:
+            prev_data = json.loads(JOBS_FILE.read_text(encoding="utf-8"))
+            PREV_JOBS = {j["id"]: j for j in prev_data.get("jobs", [])}
+        except Exception:
+            PREV_JOBS = {}
+
     all_jobs = {}
 
     print("사람인 수집 중...")

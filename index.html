@@ -220,6 +220,15 @@
   .card h3 { font-size: 15px; margin: 0; line-height: 1.4; font-weight: 600; text-wrap: balance; }
   .card .company { font-size: 13px; color: var(--text-muted); }
   .card .condition { font-size: 12px; color: var(--text-faint); line-height: 1.5; }
+  .qual-note {
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--accent-wash);
+    border-radius: 7px;
+    padding: 5px 9px;
+    width: fit-content;
+    line-height: 1.5;
+  }
 
   .card-actions { display: flex; gap: 14px; margin-top: 4px; flex-wrap: wrap; }
   .card-actions a {
@@ -460,6 +469,13 @@
       cond.className = "condition";
       cond.textContent = j.condition;
       card.appendChild(cond);
+    }
+
+    if (j.qualification_summary) {
+      var qual = document.createElement("div");
+      qual.className = "qual-note";
+      qual.textContent = j.qualification_summary;
+      card.appendChild(qual);
     }
 
     var actions = document.createElement("div");
