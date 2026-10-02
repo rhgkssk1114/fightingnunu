@@ -501,7 +501,7 @@ def fetch_catch(query):
             continue
 
         rid = item.get("RecruitID")
-        link = f"https://www.catch.co.kr/NCS/RecruitDetail?RecruitID={rid}"
+        link = f"https://www.catch.co.kr/NCS/RecruitInfoDetails/{rid}"
         company_size = guess_company_size(item.get("business_size"), item.get("PopularCategory"))
         results.append({
             "id": job_id("catch", str(rid)),
